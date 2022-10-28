@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap");
+
+#checkoutHeaderDiv {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  height: 50px;
+  background: #ff7d4d;
+  text-align: center;
+  font-size: large;
+  font-weight: 700;
+  padding-top: 20px;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+#checkoutLogoDiv {
+  height: 50px;
+  display: flex;
+  align-content: center;
+  width: 60vw;
+  overflow: visible;
+  margin-bottom: 7px;
+  margin-right: 25vw;
+}
+
+#foodMint {
+  width: auto;
+  overflow: visible;
+}
+
+.food {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mint {
+  font-size: 20px;
+  color: #000;
+  font-weight: 700;
+}
+
+#checkoutLogoDiv img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: visible;
+}
+
+#checkoutContainer {
+  text-align: center;
+  font-family: "Roboto";
+  letter-spacing: 0.1rem;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#cartLinkCh {
+  color: #000;
+  width: 30vw;
+}
+
+#cartLinkCh:hover {
+  color: #000;
+}
+.checkout {
+  background: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 25%;
+  color: black;
+  font-weight: 600;
+}
+
+.checkout p {
+  font-weight: 600;
+}
+
+.checkoutHeader {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.checkout_form {
+  padding: 0 20px;
+}
+
+.checkout_field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.label {
+  text-align: left;
+  font-size: 10px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.checkout_field input {
+  background-color: transparent;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  height: 35px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.checkout_field select {
+  height: 39px;
+  border-radius: 5px;
+  border: 1px solid #b2beb5;
+}
+
+.checkout_field input:focus,
+.checkout_field select:focus,
+.checkout_field input:hover,
+.checkout_field select:hover {
+  outline: none;
+  border: 1px solid#ff7d4d;
+}
+
+#contactHeader {
+  overflow: hidden;
+  margin-top: 10px;
+}
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.paystack_button {
+  cursor: pointer;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  background-color: #ff7d4d;
+  font-weight: bold;
+  color: seashell;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 35px;
+}
+
+@media screen and (max-width: 480px) {
+  #checkoutHeaderDiv {
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: 50px;
+    background: #ff7d4d;
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+    padding-top: 20px;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  #checkoutLogoDiv {
+    padding-left: 5px;
+    height: 50px;
+    display: flex;
+    align-content: center;
+    width: 50vw;
+    overflow: visible;
+    margin-bottom: 7px;
+    margin-right: 25vw;
+  }
+
+  #foodMint {
+    width: auto;
+    overflow: visible;
+  }
+
+  .food {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .mint {
+    font-size: 18px;
+    color: #000;
+    font-weight: 700;
+  }
+
+  #checkoutLogoDiv img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: visible;
+  }
+
+  #checkoutSpan {
+    font-size: 13px;
+    margin-left: 5px;
+  }
+
+  #checkoutContainer {
+    text-align: center;
+    font-family: "Roboto";
+    letter-spacing: 0.1rem;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #cartLinkCh {
+    color: #000;
+    width: 30vw;
+    font-size: 12px;
+  }
+
+  #cartLinkCh:hover {
+    color: #000;
+  }
+  .checkout {
+    background: #fff;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 85%;
+    color: black;
+    font-weight: 600;
+  }
+
+  .checkout p {
+    font-weight: 600;
+  }
+
+  .checkoutHeader {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .checkout_form {
+    padding: 0 20px;
+  }
+
+  .checkout_field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .label {
+    text-align: left;
+    font-size: 10px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+
+  .checkout_field input {
+    background-color: transparent;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    height: 35px;
+    border-radius: 5px;
+    padding-left: 10px;
+  }
+
+  .checkout_field select {
+    height: 39px;
+    border-radius: 5px;
+    border: 1px solid #b2beb5;
+  }
+
+  .zipField {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .zipField input {
+    font-size: 12px;
+    padding-left: 2px;
+    padding-right: 10px;
+  }
+
+  #zip {
+    margin-left: 20px;
+  }
+
+  .checkout_field input:focus,
+  .checkout_field select:focus,
+  .checkout_field input:hover,
+  .checkout_field select:hover {
+    outline: none;
+    border: 1px solid#ff7d4d;
+  }
+
+  #contactHeader {
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .location {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .paystack_button {
+    cursor: pointer;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background-color: #ff7d4d;
+    font-weight: bold;
+    color: seashell;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+  }
+}

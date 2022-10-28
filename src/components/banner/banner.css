@@ -1,0 +1,182 @@
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("C:\Users\HP ENVY X360\Dev AY\react-proj\src\assets\rqse48LEMFDhS84Xr2-yF-transformed-(4)-transformed.jpeg");
+  background-size: contain;
+  background-repeat: repeat;
+  height: 400px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 25px;
+  z-index: -2;
+}
+
+.slogan {
+  padding-top: 40px;
+  padding-left: 50px;
+}
+
+.sloganPara {
+  width: 600px;
+  font-size: 15px;
+  font-weight: 600;
+  color: green;
+}
+
+.slogan1 {
+  background-color: #ffdead;
+  border-radius: 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  padding-top: 10px;
+  height: auto;
+  margin: -100px 20px;
+  font-size: 32px;
+  font-weight: 900;
+  animation: appear 1s ease-in-out 0.5s 1 forwards;
+}
+
+@keyframes appear {
+  0% {
+    text-align: left;
+    margin: -100px 20px;
+  }
+
+  100% {
+    text-align: center;
+    margin: 20px 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+#bannerBtn {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  color: #fff;
+  position: relative;
+  top: 350px;
+  animation: slideUp 2s ease 1 forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    top: 350px;
+    margin: 100px 5vw;
+  }
+
+  100% {
+    top: -20px;
+    margin: -20px 5vw;
+  }
+}
+
+#menuBtn,
+#orderBtn {
+  border: none;
+  text-align: center;
+  height: 50px;
+  border-radius: 10px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #357a38;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 1px 1px 1px seashell;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.5s ease;
+}
+
+#menuBtn:hover,
+#orderBtn:hover {
+  background-color: #ff7d4d !important;
+}
+
+@media screen and (max-width: 480px) {
+  .banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      url("C:\Users\HP ENVY X360\Dev AY\react-proj\src\assets\rqse48LEMFDhS84Xr2-yF-transformed-(4)-transformed.jpeg");
+    background-size: contain;
+    background-repeat: repeat;
+    height: 210px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 82px;
+    z-index: -2;
+    overflow: visible;
+  }
+
+  .slogan {
+    padding-top: 20px;
+    height: 150px;
+    overflow: visible;
+  }
+
+  .sloganPara {
+    width: 250px;
+    font-size: 15px;
+    font-weight: 600;
+    color: green;
+    display: none;
+  }
+
+  .slogan1 {
+    background-color: #ffdead;
+    border-radius: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    padding-top: 20px;
+    height: 50px;
+    position: relative;
+    left: -50px;
+    font-size: 15px;
+    font-weight: 900;
+    animation: appear 1s ease-in-out 0.5s 1 forwards;
+    border: 0.5px solid black;
+    overflow: visible;
+  }
+
+  #menuBtn,
+  #orderBtn {
+    border: none;
+    text-align: center;
+    height: 35px;
+    border-radius: 10px;
+    width: 110px;
+    border-radius: 10px;
+    background-color: #357a38;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 1px 1px 1px seashell;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+  }
+
+  @keyframes slideUp {
+    0% {
+      top: 350px;
+      margin: 100px 2vw;
+    }
+
+    100% {
+      top: -20px;
+      margin: 55px -1vw;
+    }
+  }
+}

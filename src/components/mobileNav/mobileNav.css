@@ -1,0 +1,189 @@
+@media screen and (min-width: 481px) {
+  #mobileNav,
+  #searchBoxM input,
+  #flexDivM {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #mobileNav {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 0 10px;
+    overflow: visible;
+  }
+
+  #LogoDivMobile {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    overflow: visible;
+    margin: 10px auto 0 0;
+  }
+
+  #LogoDivMobile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+
+  #foodMintM {
+    width: auto;
+    overflow: visible;
+  }
+
+  #foodM {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  #mintM {
+    font-size: 20px;
+    color: #ff7d4d;
+    font-weight: 700;
+  }
+
+  #foodLogoNav img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: visible;
+  }
+
+  .headerBtn {
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    width: auto;
+    margin-right: 2.5vw;
+  }
+
+  .navLink {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.4s ease-in 0s;
+  }
+
+  .navLink:hover,
+  .link:hover {
+    color: #ff7d4d;
+    text-decoration: none;
+  }
+
+  #search_BarM {
+    width: 80vw;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 10px;
+
+    overflow: visible;
+  }
+
+  #search_BoxM {
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  #search_BoxM input {
+    outline: none;
+    width: 80vw;
+    height: 43px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 15px;
+    padding-left: 10px;
+  }
+
+  #search_BoxM input:focus,
+  #search_BoxM input:hover {
+    border: 1px solid #ff7d4d;
+  }
+
+  #flex_DivM {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 40px;
+    width: auto;
+    margin-top: 22px;
+    margin-left: -30px;
+  }
+
+  .searchIcon {
+    font-size: 28px;
+    color: black;
+  }
+
+  #headerBtnDiv_ {
+    overflow: visible;
+    display: flex;
+    width: 40vw;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 20px;
+  }
+
+  .navLink {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.4s ease-in 0s;
+    overflow: visible;
+  }
+
+  .navLink:hover {
+    color: #ff7d4d;
+    text-decoration: none;
+  }
+
+  .userIcon_ {
+    overflow: visible;
+    font-size: 30px;
+    transition: color 0.3s ease-in 0s;
+    margin: 5px auto auto 15px;
+    color: #000;
+  }
+
+  .userIcon_:hover {
+    color: #ff7d4d;
+  }
+
+  .cartBox {
+    border: none;
+    height: auto;
+    font-weight: 600;
+    transition: color 0.4s ease-in 0s;
+  }
+
+  .cartIcon_ {
+    font-size: 26px;
+    z-index: 1;
+    margin-left: 15px;
+    color: #000;
+  }
+
+  .cartIcon_:hover {
+    color: #ff7d4d;
+  }
+
+  .counter {
+    width: 22px;
+    height: 22px;
+    background-color: #ff7d4d;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-bottom: -5px;
+    position: relative;
+    z-index: 2000;
+    overflow: hidden;
+  }
+}

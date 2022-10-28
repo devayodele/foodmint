@@ -1,0 +1,104 @@
+.offerUpdateDiv {
+  width: 100vw;
+  height: 250px;
+  background-color: #0c1b27;
+}
+.offerUpdate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  height: inherit;
+}
+
+.offerUpdate label {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  margin-right: 40px;
+}
+
+.offerUpdate input {
+  padding-left: 20px;
+  height: 50px;
+  width: 600px;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.offerUpdate input:hover,
+.offerUpdate input:focus {
+  box-shadow: inset 0 0 2px 2px #ff7d4d;
+}
+
+.offerUpdate button {
+  width: 100px;
+  height: 38px;
+  border-radius: 40px;
+  margin-left: -105px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #ff7d4d;
+  color: #fff;
+  border: none;
+}
+
+@media screen and (max-width: 480px) {
+  .offerUpdateDiv {
+    width: 100vw;
+    height: 250px;
+    background-color: #0c1b27;
+  }
+
+  .offerUpdate {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+  }
+
+  .offerUpdate label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 40px;
+    margin-left: 15%;
+    width: 95vw;
+  }
+
+  .offerUpdate input {
+    padding-left: 2vw;
+    height: 50px;
+    width: 85vw;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    margin-left: -4%;
+  }
+
+  .offerUpdate input:hover,
+  .offerUpdate input:focus {
+    box-shadow: inset 0 0 2px 2px #ff7d4d;
+  }
+
+  .offerUpdate button {
+    position: relative;
+    left: 39%;
+    top: -6.8vh;
+    width: 100px;
+    height: 38px;
+    border-radius: 40px;
+    margin-left: -105px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #ff7d4d;
+    color: #fff;
+    border: none;
+  }
+}

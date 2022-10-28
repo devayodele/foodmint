@@ -1,0 +1,309 @@
+.contactDiv {
+  margin: 0 auto;
+  padding: 50px 50px 100px 50px;
+  width: 100vw;
+  height: auto;
+  text-align: center;
+}
+
+.contactDiv button {
+  border-radius: 5px;
+  width: auto;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid #ff7d4d;
+  margin-bottom: 20px;
+  color: #ff7d4d;
+  background-color: #fff;
+}
+
+.contactDiv h2 {
+  text-align: center;
+  width: auto;
+  padding: 0 20px;
+  margin: 30px auto;
+  font-size: 30px;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.contact {
+  display: inline-block;
+  width: 400px;
+  height: 150px;
+  margin: 20px;
+  -webkit-box-shadow: 0px 0px 7px 4px #e8f3f8;
+  -moz-box-shadow: 0px 0px 7px 4px #e8f3f8;
+  box-shadow: 0px 0px 7px 4px #e8f3f8;
+}
+
+.contactOptions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-left: 70px;
+}
+
+.iconWrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff7d4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactOptions p {
+  margin-bottom: 15px;
+  color: rgb(79, 64, 64);
+}
+.contactForm {
+  height: 400px;
+  width: 590px;
+  margin: 0 auto;
+}
+
+.contactForm h2 {
+  overflow: hidden;
+  text-align: center;
+}
+
+.contactName {
+  width: 282px;
+  height: 50px;
+  border-radius: 10px;
+  display: inline-block;
+  padding-left: 15px;
+  border: 0.5px solid #000;
+  font-weight: 18px;
+}
+
+.contactEmail {
+  border: 0.5px solid #000;
+  width: 282px;
+  height: 50px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 20px 0 20px 20px;
+  padding-left: 15px;
+  font-weight: 18px;
+}
+
+.contactSubject {
+  width: 99%;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  border: 0.5px solid #000;
+  font-weight: 20px;
+}
+
+.textArea {
+  display: block;
+  height: 100px;
+  width: 99%;
+  padding-left: 15px;
+  border: 0.5px solid #000;
+  font-weight: 18px;
+  padding-top: 10px;
+  border-radius: 10px;
+}
+
+.contactName:hover,
+.contactEmail:hover,
+.contactSubject:hover,
+.textArea:hover,
+.contactName:focus,
+.contactEmail:focus,
+.contactSubject:focus,
+.textArea:focus {
+  border-color: #ff7d4d;
+  outline: none;
+}
+
+.contactFormBtn {
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  border: none;
+  color: #fff;
+  background: #ff7d4d;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .contactDiv {
+    margin: 0 auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .contactDiv button {
+    border-radius: 5px;
+    width: auto;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #ff7d4d;
+    margin-bottom: 20px;
+    color: #ff7d4d;
+    background-color: #fff;
+  }
+
+  .contactDiv h2 {
+    text-align: center;
+    width: auto;
+    padding: 0 20px;
+    margin: 5px auto;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .contact {
+    position: relative;
+    right: 4%;
+    width: 75vw;
+    height: 120px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0px 0px 7px 4px #e8f3f8;
+    -moz-box-shadow: 0px 0px 7px 4px #e8f3f8;
+    box-shadow: 0px 0px 7px 4px #e8f3f8;
+    overflow: visible;
+  }
+
+  .contactOptions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+  }
+
+  .iconWrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 60px;
+    background-color: #ff7d4d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 50px;
+    overflow: visible;
+  }
+
+  .iconWrapper i {
+    font-size: 22px;
+    width: 70px;
+    color: #fff;
+  }
+
+  .contactOption {
+    display: inline-block;
+    width: auto;
+    overflow: visible;
+  }
+
+  .contactOptions p {
+    margin-right: 10px;
+    font-size: 16px;
+    width: 150px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: rgb(79, 64, 64);
+    position: relative;
+    right: 40px;
+  }
+
+  .contactForm {
+    height: auto;
+    width: 80vw;
+    margin: -40px auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .contactForm h2 {
+    overflow: visible;
+    text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0 auto;
+  }
+
+  .contactName {
+    margin-top: 30px;
+    width: inherit;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 15px;
+    border: 0.5px solid #000;
+    font-weight: 18px;
+  }
+
+  .contactEmail {
+    border: 0.5px solid #000;
+    width: inherit;
+    height: 50px;
+    border-radius: 10px;
+    margin: 20px auto 20px auto;
+    padding-left: 15px;
+    font-weight: 18px;
+  }
+
+  .contactSubject {
+    width: inherit;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border: 0.5px solid #000;
+    font-weight: 20px;
+  }
+
+  .textArea {
+    display: block;
+    height: 100px;
+    width: 99%;
+    padding-left: 15px;
+    border: 0.5px solid #000;
+    font-weight: 18px;
+    padding-top: 10px;
+    border-radius: 10px;
+  }
+
+  .contactName:hover,
+  .contactEmail:hover,
+  .contactSubject:hover,
+  .textArea:hover,
+  .contactName:focus,
+  .contactEmail:focus,
+  .contactSubject:focus,
+  .textArea:focus {
+    border-color: #ff7d4d;
+    outline: none;
+  }
+
+  .contactFormBtn {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    background: #ff7d4d;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,409 @@
+.footer {
+  position: relative;
+}
+
+.footerDiv {
+  margin-top: 30px;
+  height: auto;
+  width: 100vw;
+  background-color: #0c1b27;
+  padding: 4vw 8vw 0 8vw;
+  z-index: 0;
+}
+
+.foodLogoDiv {
+  display: inline-block;
+  color: #fff;
+  margin-right: 40px;
+  margin: 30px auto 110px auto;
+  width: 400px;
+  height: auto;
+}
+
+.foodLogo_ {
+  margin-bottom: -10px;
+}
+
+.food_ {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mint_ {
+  font-size: 22px;
+  color: orangered;
+  font-weight: 700;
+}
+
+.foodLogoDiv p {
+  margin-top: 32px;
+}
+
+.underlineLeftfl {
+  width: 20px;
+  height: 3px;
+  background-color: #ff7d4d;
+  display: inline-block;
+  margin-top: -50px;
+  margin-left: 15px;
+}
+
+.underlineRightfl {
+  margin-top: -30px;
+  width: 50px;
+  height: 3px;
+  background-color: #ff7d4d;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.quickLinks,
+.supportLinks {
+  display: inline-block;
+  width: 250px;
+  color: #fff;
+  height: auto;
+  margin-right: 10px;
+  margin-bottom: 60px;
+}
+.quickLinks h5,
+.supportLinks h5 {
+  height: auto;
+  padding: 0px;
+  margin-bottom: -10px;
+  overflow: hidden;
+}
+
+.underlineLeftqL {
+  width: 20px;
+  height: 3px;
+  background-color: #ff7d4d;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.underlineRightql {
+  width: 50px;
+  height: 3px;
+  background-color: #ff7d4d;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.underlineLeftsl {
+  width: 20px;
+  height: 3px;
+  background-color: #ff7d4d;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.underlineRightsl {
+  width: 50px;
+  height: 3px;
+  background-color: #ff7d4d;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.quickLinks ul,
+.supportLinks ul {
+  margin-top: 30px;
+}
+
+.quickLinks ul li,
+.supportLinks ul li {
+  transition: margin 0.5s ease;
+}
+
+.quickLinks ul li::before,
+.supportLinks ul li::before {
+  content: "\00BB";
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.quickLinks ul li:hover,
+.supportLinks ul li:hover {
+  margin-left: 10px;
+}
+
+.latestNews {
+  display: inline-block;
+  width: 300px;
+  color: #fff;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.ltnewsCalDiv {
+  color: #fff;
+  width: auto;
+  padding: 12px;
+  height: auto;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.ltnewsCalDate {
+  width: 100px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.latestNews h5 {
+  height: auto;
+  padding: 0px;
+  margin-bottom: -10px;
+  overflow: hidden;
+}
+
+.latestNews p {
+  margin-top: 30px;
+  margin-bottom: -5px;
+}
+
+.underlineLeftln {
+  width: 20px;
+  height: 3px;
+  background-color: #ff7d4d;
+  display: inline-block;
+  margin-top: -50px;
+  margin-left: 15px;
+}
+
+.underlineRightln {
+  width: 50px;
+  height: 3px;
+  background-color: #ff7d4d;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.copywrightDiv {
+  height: 90px;
+  width: 100vw;
+  background-color: #000;
+  color: #fff;
+  padding: 4vh 8vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    position: relative;
+  }
+
+  .footerDiv {
+    margin-top: 30px;
+    height: auto;
+    width: 100vw;
+    background-color: #0c1b27;
+    padding: 4vw 8vw 0 8vw;
+    z-index: 0;
+  }
+
+  .foodLogoDiv {
+    display: inline-block;
+    color: #fff;
+    margin-right: 40px;
+    margin-bottom: 110px;
+    width: 400px;
+    height: auto;
+  }
+
+  .foodLogo_ {
+    margin-bottom: -10px;
+  }
+
+  .food_ {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .mint_ {
+    font-size: 22px;
+    color: orangered;
+    font-weight: 700;
+  }
+
+  .foodLogoDiv p {
+    margin-top: 32px;
+    width: 80vw;
+  }
+
+  .underlineLeftfl {
+    width: 20px;
+    height: 3px;
+    background-color: #ff7d4d;
+    display: inline-block;
+    margin-top: -50px;
+    margin-left: 15px;
+  }
+
+  .underlineRightfl {
+    margin-top: -30px;
+    width: 50px;
+    height: 3px;
+    background-color: #ff7d4d;
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .quickLinks {
+    display: inline-block;
+    width: 250px;
+    color: #fff;
+    height: auto;
+    margin-top: -70px;
+    margin-right: 10px;
+    margin-bottom: -20px;
+  }
+
+  .supportLinks {
+    margin-top: 30px;
+    display: inline-block;
+    width: 250px;
+    color: #fff;
+    height: auto;
+
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .quickLinks h5 {
+    height: auto;
+    padding: 0px;
+    margin-bottom: -10px;
+    overflow: hidden;
+  }
+
+  .underlineLeftqL {
+    width: 20px;
+    height: 3px;
+    background-color: #ff7d4d;
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .underlineRightql {
+    width: 50px;
+    height: 3px;
+    background-color: #ff7d4d;
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .underlineLeftsl {
+    width: 20px;
+    height: 3px;
+    background-color: #ff7d4d;
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .underlineRightsl {
+    width: 50px;
+    height: 3px;
+    background-color: #ff7d4d;
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .quickLinks ul,
+  .supportLinks ul {
+    margin-top: 30px;
+  }
+
+  .quickLinks ul li,
+  .supportLinks ul li {
+    transition: margin 0.5s ease;
+  }
+
+  .quickLinks ul li::before,
+  .supportLinks ul li::before {
+    content: "\00BB";
+    margin-right: 10px;
+    font-size: 25px;
+  }
+
+  .quickLinks ul li:hover,
+  .supportLinks ul li:hover {
+    margin-left: 10px;
+  }
+
+  .latestNews {
+    display: inline-block;
+    width: 300px;
+    color: #fff;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  .ltnewsCalDiv {
+    color: #fff;
+    width: auto;
+    padding: 12px;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .ltnewsCalDate {
+    width: 100px;
+    height: auto;
+    margin-left: 10px;
+  }
+
+  .latestNews h5 {
+    height: auto;
+    padding: 0px;
+    margin-bottom: -10px;
+    overflow: hidden;
+  }
+
+  .latestNews p {
+    margin-top: 30px;
+    margin-bottom: -5px;
+    width: 80vw;
+  }
+
+  .underlineLeftln {
+    width: 20px;
+    height: 3px;
+    background-color: #ff7d4d;
+    display: inline-block;
+    margin-top: -50px;
+    margin-left: 15px;
+  }
+
+  .underlineRightln {
+    width: 50px;
+    height: 3px;
+    background-color: #ff7d4d;
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .copywrightDiv {
+    height: 90px;
+    width: 100vw;
+    background-color: #000;
+    color: #fff;
+    padding: 4vh 8vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
