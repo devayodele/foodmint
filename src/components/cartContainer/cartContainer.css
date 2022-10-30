@@ -216,6 +216,17 @@
   margin-right: 40px;
 }
 
+.icon_pen_ {
+  border: 1px solid #ff7d4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  overflow: visible;
+}
+
 .inputDiv {
   display: flex;
   align-items: center;
@@ -328,7 +339,8 @@
   }
 
   .itemCon {
-    width: 100vw;
+    width: 90vw;
+    margin: 0 auto;
     border: 1px solid #e5e4e2;
     border-radius: 10px;
   }
@@ -348,13 +360,13 @@
   }
 
   .emptyCart {
-    font-size: 27px;
+    font-size: 25px;
     font-weight: 600;
     color: #ff7d4d;
   }
 
   .addToCart {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500px;
   }
 
@@ -376,7 +388,6 @@
     justify-content: space-evenly;
     overflow: visible;
     height: auto;
-    padding: 30px 0;
   }
 
   .firstDiv {
@@ -386,7 +397,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 90%;
-    overflow: hidden;
+    margin-bottom: 20px;
     overflow: visible;
   }
 
@@ -412,6 +423,7 @@
 
   .secondDiv {
     text-align: center;
+    margin-bottom: 20px;
   }
 
   .quantityDiv {
@@ -473,7 +485,8 @@
   }
 
   .cartInfo {
-    width: 100vw;
+    width: 90vw;
+    margin: 0 auto;
     height: auto;
   }
 
@@ -503,6 +516,19 @@
     border-radius: 5px;
   }
 
+  .icon_pen_ {
+    border: 1px solid #ff7d4d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    overflow: visible;
+    position: relative;
+    left: 2vw;
+  }
+
   .input {
     height: 32px;
     width: 200px;
@@ -518,7 +544,7 @@
   }
 
   .paymentBox {
-    padding: 20px 0;
+    padding: 20px 10px 20px 0;
     height: auto;
     border: 1px;
     border: 1px solid #e5e4e2;
@@ -534,7 +560,8 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 40px;
-    margin-right: 40px;
+
+    overflow: visible;
   }
 
   .inputDiv {
@@ -623,7 +650,6 @@
     margin: 0 auto;
     background: green;
     text-align: center;
-    padding-top: 15px;
     color: #fff;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -631,5 +657,6 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding-bottom: 30px;
   }
 }

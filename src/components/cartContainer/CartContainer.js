@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../pages/userAuth/firebase";
 import "./cartContainer.css";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -11,6 +13,7 @@ import {
 } from "../../store/cartSlice";
 
 export default function CartContainer() {
+  const [user, loading, error] = useAuthState(auth);
   const cart = useSelector((state) => state.items.cart);
 
   const dispatch = useDispatch();
@@ -139,7 +142,7 @@ export default function CartContainer() {
             >
               {"Payment Information"}
             </h5>
-            <div className="icon" style={{ marginLeft: "30px" }}>
+            <div className="icon_pen_">
               <i
                 class="fas fa-pen"
                 style={{ color: "black", size: "40px" }}
@@ -242,7 +245,7 @@ export default function CartContainer() {
             </h5>
             <div className="icon">
               <i
-                className="fas fa-phone-alt"
+                className="fas fa-phone-alt "
                 style={{ color: "black", size: "40px" }}
               ></i>
             </div>
@@ -295,7 +298,7 @@ export default function CartContainer() {
           <h5>Grand Total</h5>
           <span className="cost">{`NGN${grandTotal}`}</span>
         </div>
-        <Link className="link" to="/checkout">
+        <Link className="link" to={user ? "/checkout" : "/login"}>
           <div
             id="checkProcede"
             onClick={(event) => dispatch(addTotalAmount(grandTotal))}

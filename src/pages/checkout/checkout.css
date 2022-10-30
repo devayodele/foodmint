@@ -233,7 +233,8 @@
   #cartLinkCh {
     color: #000;
     width: 30vw;
-    font-size: 12px;
+    font-size: 10px;
+    margin-bottom: 5px;
   }
 
   #cartLinkCh:hover {

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./banner.css";
 
 export default function Banner() {
@@ -27,8 +28,12 @@ export default function Banner() {
       </div>
 
       <div id="bannerBtn">
-        <button id="menuBtn">OUR MENU</button>
-        <button id="orderBtn">ORDER NOW</button>
+        <Link to="/menu/drinks/popular">
+          <button id="menuBtn">OUR MENU</button>
+        </Link>
+        <Link to="/cart">
+          <button id="orderBtn">ORDER NOW</button>
+        </Link>
       </div>
     </>
   );

@@ -109,10 +109,10 @@
 
   @keyframes slideUpb {
     0% {
-      margin-top: 160px;
+      margin-top: 170px;
     }
     100% {
-      margin-top: 40px;
+      margin-top: 130px;
     }
   }
 

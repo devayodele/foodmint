@@ -59,6 +59,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    padding-right: 40px;
   }
 
   .popular {
@@ -72,7 +73,7 @@
     -webkit-box-shadow: 0 0 8px 5px #e5e4e2;
     color: #000;
     background: #fff;
-    width: auto;
+    width: 120px;
     margin-right: 10px;
   }
 
@@ -86,7 +87,7 @@
     transition: background-color 0.5s ease-in-out 0s;
     background: #fff;
     height: auto;
-    width: 90px;
+    width: auto;
   }
 
   .menuLink {

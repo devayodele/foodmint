@@ -36,7 +36,7 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
-const signInWithGoogle = async () => {
+const signInWithGoogle = async (auth, googleProvider) => {
   try {
     const res = await signInWithPopup(auth, googleProvider);
     const user = res.user;
@@ -74,7 +74,7 @@ const registerWithEmailAndPassword = async (email, password) => {
   }
 };
 
-const sendPasswordReset = async (email) => {
+const sendPasswordReset = async (auth, email) => {
   try {
     await sendPasswordResetEmail(auth, email);
     alert("password rest link sent!");
@@ -90,6 +90,7 @@ const logOut = async (auth) => {
 
 export {
   auth,
+  googleProvider,
   db,
   signInWithGoogle,
   loginWithEmailAndPassword,

@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
+import "./popular.css";
 import MobileNav from "../../components/mobileNav/MobileNav";
+import { Link } from "react-router-dom";
 import PopularAll from "../../components/popularAll/PopularAll";
 import PopularFood from "../../components/popularFood/PopularFood";
 import Header from "../../components/header/Header";
@@ -8,32 +10,41 @@ import MenuDisplayb from "../../components/menuDisplayb/MenuDisplayb";
 import Footer from "../../components/footer/Footer";
 
 export default function Popular() {
-  const [loading, setLoading] = useState(true);
   const { mealCat } = useParams();
-  const loadingHandler = (val) => {
-    setLoading(val);
-  };
+  const AVAILABLE_LINKS = [
+    "salad",
+    "drinks",
+    "pizza",
+    "streak",
+    "sandwich",
+    "hamburger",
+  ];
 
-  useEffect(() => {
-    let timeoutId;
-    if (loading === true) {
-      timeoutId = setTimeout(() => {
-        setLoading(false);
-      }, 2000);
-    }
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  });
+  const acceptedLink = AVAILABLE_LINKS.find(
+    (ev) => ev === mealCat.toLowerCase()
+  );
 
   return (
-    <div>
-      <Header />
-      <MobileNav />
-      <MenuDisplayb loading={loadingHandler} />
-      <PopularAll />
-      {loading ? <div className="loader"></div> : <PopularFood />}
-      <Footer />
-    </div>
+    <>
+      {acceptedLink && (
+        <div>
+          <Header />
+          <MobileNav />
+          <MenuDisplayb />
+          <PopularAll />
+          <PopularFood />
+          <Footer />
+        </div>
+      )}
+
+      {!acceptedLink && (
+        <p>
+          Unrealistic query detected, Don't worry just go back
+          <Link to="/" id="pageErrorlnk">
+            Home
+          </Link>
+        </p>
+      )}
+    </>
   );
 }

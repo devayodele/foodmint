@@ -1,7 +1,7 @@
 @media screen and (min-width: 481px) {
   #mobileNav,
-  #searchBoxM input,
-  #flexDivM {
+  #LogoDivMobile,
+  #search_BarM {
     display: none;
   }
 }
@@ -13,6 +13,14 @@
     justify-content: space-between;
     padding: 0 10px;
     overflow: visible;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 999999999;
+  }
+
+  #mobileNav a {
+    text-decoration: none;
   }
 
   #LogoDivMobile {
@@ -80,23 +88,25 @@
     display: flex;
     margin: 0 auto;
     border-radius: 10px;
-
+    position: relative;
+    top: 100px;
+    left: 3vw;
     overflow: visible;
   }
 
   #search_BoxM {
     height: auto;
-    margin-top: 20px;
+
     border-radius: 10px;
   }
 
   #search_BoxM input {
     outline: none;
-    width: 80vw;
+    width: 75vw;
     height: 43px;
     border-radius: 10px;
     border: 1px solid black;
-    font-size: 15px;
+    font-size: 13px;
     padding-left: 10px;
   }
 
@@ -111,7 +121,7 @@
     align-items: center;
     height: 40px;
     width: auto;
-    margin-top: 22px;
+    margin-top: 0;
     margin-left: -30px;
   }
 
@@ -127,6 +137,7 @@
     align-items: center;
     justify-content: space-around;
     margin-right: 20px;
+    position: relative;
   }
 
   .navLink {
@@ -153,7 +164,7 @@
     color: #ff7d4d;
   }
 
-  .cartBox {
+  .cartBox__ {
     border: none;
     height: auto;
     font-weight: 600;

@@ -3,7 +3,7 @@ import "./experts.css";
 
 export default function Experts() {
   return (
-    <div className="experts">
+    <div className="experts" id="experts__">
       <button>EXPERTS</button>
       <h2>KITCHEN EXPERTS</h2>
 

@@ -8,7 +8,7 @@ export default function AllFood() {
   const [state, setState] = useState([]);
   const dispatch = useDispatch();
   const cartIconAll = "cartIconAll   fas fa-shopping-cart";
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const { mealCat } = useParams(); //
   let firstItemPrice =
@@ -115,10 +115,9 @@ export default function AllFood() {
   const foodAPI_ID = "12225ba6";
   const foodAPIKey = "c98835d08471cdf28312645fe2a9ea7a";
 
-  let formatData;
-
-  const fetchFood = async () => {
-    try {
+  useEffect(() => {
+    const fetchFood = async () => {
+      setLoading(true);
       const mealRes = await fetch(
         `https://api.edamam.com/api/food-database/v2/parser?ingr=${mealCat}&app_id=${foodAPI_ID}&app_key=${foodAPIKey}`
       );
@@ -127,7 +126,7 @@ export default function AllFood() {
       console.log(mealResJSON);
       const popularMeal = mealResJSON.hints.slice(0, 10);
       console.log(popularMeal);
-      formatData = popularMeal.map((item, index) => ({
+      const formatData = popularMeal.map((item, index) => ({
         id: `${item.food.foodId}${index}`,
         title: `${item.food.label}`,
         label: `${item.food.categoryLabel ? item.food.categoryLabel : ""}, ${
@@ -138,25 +137,17 @@ export default function AllFood() {
       }));
 
       setState(formatData);
-
+      setLoading(false);
       console.log(formatData);
 
       return formatData;
+    };
+
+    try {
+      fetchFood();
     } catch (error) {
       console.log(error.message);
     }
-  };
-  const generateFood = useCallback(fetchFood, [fetchFood]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      generateFood();
-    }, 1000);
-    setLoading(false);
-
-    return () => {
-      clearTimeout(timer);
-    };
   }, [mealCat]);
 
   return (

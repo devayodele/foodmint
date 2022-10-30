@@ -10,14 +10,14 @@ export default function Header() {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/menu", { replace: true });
+    navigate(`/menu/${value}/popular`);
   };
 
   const handleOnchange = (e) => {
     setValue(e.target.value);
   };
   const handleSubmit = (e) => {
-    e.preventDefault();
+    navigate(`/menu/${value}/popular`);
   };
 
   const userIcon = "userIcon  fas fa-user-alt";
@@ -26,45 +26,47 @@ export default function Header() {
 
   return (
     <div className="header">
-      <div id="logoDiv">
-        <img
-          src="https://cdn3.vectorstock.com/i/1000x1000/19/12/fork-spoon-and-knife-sign-orange-icon-on-black-vector-13391912.jpg"
-          alt="logo"
-        />
-        <div id="foodMint">
-          <span className="foodH_">FOOD</span>
-          <span className="mintH_">MINT</span>
+      <Link to="/">
+        <div id="logoDiv">
+          <img
+            src="https://cdn3.vectorstock.com/i/1000x1000/19/12/fork-spoon-and-knife-sign-orange-icon-on-black-vector-13391912.jpg"
+            alt="logo"
+          />
+          <div id="foodMint">
+            <span className="foodH_">FOOD</span>
+            <span className="mintH_">MINT</span>
+          </div>
         </div>
-      </div>
+      </Link>
 
       <div className="headerBtn">
-        <a href="#home" className="navLink">
+        <Link to="/" className="navLink">
           Home
-        </a>
+        </Link>
       </div>
 
       <div className="headerBtn">
-        <a href="#about" className="navLink">
+        <a href="#aboutDiv" className="navLink">
           About
         </a>
       </div>
       <div className="headerBtn">
-        <a href="#service" className="navLink">
+        <a href="#service_sect" className="navLink">
           Service
         </a>
       </div>
       <div className="headerBtn">
-        <a href="#Team" className="navLink">
+        <a href="#experts__" className="navLink">
           Team
         </a>
       </div>
       <div className="headerBtn">
-        <a href="#Team" className="navLink">
+        <a href="#testimonial_Div" className="navLink">
           Review
         </a>
       </div>
       <div className="headerBtn">
-        <a href="#Contact" className="navLink">
+        <a href="#contact_div" className="navLink">
           Contact
         </a>
       </div>

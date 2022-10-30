@@ -8,7 +8,7 @@ export default function Service() {
   const hotline = "hotline   fas fa-cloud-download-alt ";
 
   return (
-    <div className="serviceSect">
+    <div className="serviceSect" id="service_sect">
       <button className="serviceBtn">FEATURE</button>
       <h2>WE OFFER THE BEST SERVICE</h2>
 

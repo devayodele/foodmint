@@ -6,6 +6,10 @@ import { addnRemoveCart } from "../../store/cartSlice";
 
 export default function PopularFood() {
   const [state, setState] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [click, setClick] = useState(false);
+
+  const isClick_ = !click ? "dishDetails" : "isClicked_ ";
 
   const dispatch = useDispatch();
 
@@ -104,10 +108,9 @@ export default function PopularFood() {
   const foodAPI_ID = "12225ba6";
   const foodAPIKey = "c98835d08471cdf28312645fe2a9ea7a";
 
-  let formatData;
-
-  const fetchFood = async () => {
-    try {
+  useEffect(() => {
+    const fetchFood = async () => {
+      setLoading(true);
       const mealRes = await fetch(
         `https://api.edamam.com/api/food-database/v2/parser?ingr=${mealCat}&app_id=${foodAPI_ID}&app_key=${foodAPIKey}`
       );
@@ -116,7 +119,7 @@ export default function PopularFood() {
       console.log(mealResJSON);
       const popularMeal = mealResJSON.hints.slice(0, 4);
       console.log(popularMeal);
-      formatData = popularMeal.map((item, index) => ({
+      const formatData = popularMeal.map((item, index) => ({
         id: `${item.food.foodId}${index}`,
         title: `${item.food.label}`,
         label: `${item.food.categoryLabel ? item.food.categoryLabel : ""}, ${
@@ -127,55 +130,70 @@ export default function PopularFood() {
       }));
 
       setState(formatData);
-
+      setLoading(false);
       console.log(formatData);
+    };
+
+    try {
+      fetchFood();
     } catch (error) {
       console.log(error.message);
     }
-  };
-  const generateFood = useCallback(fetchFood, [fetchFood]);
-
-  useEffect(() => {
-    generateFood();
   }, [mealCat]);
 
   return (
-    <div className="foodItems">
-      {state.map((item, index) => {
-        return (
-          <div className="menuItem" key={item.id}>
-            <div className="dishImgBox">
-              <img src={item.image} alt={item.title} className="dishImg" />
-            </div>
-            <div
-              className="dishDetails"
-              onClick={(event) => {
-                dispatch(addnRemoveCart(item));
-              }}
-            >
-              <span className="title">{item.title}</span>
-              <span className="label">{item.label}</span>
-              <span className="brand">{item.brand}</span>
-              <span className="prices">NGN{item.price}</span>
-              <span style={{ overflow: "hidden" }}>
-                <span className="itemRatings">
-                  <span className="fa fa-star " style={{ color: "red" }}></span>
-                  <span className="fa fa-star" style={{ color: "red" }}></span>
-                  <span className="fa fa-star" style={{ color: "red" }}></span>
-                  <span className="fa fa-star "></span>
-                  <span className="fa fa-star"></span>
-                </span>
-              </span>
-              <span className="addCart">
-                Add To{" "}
-                <span>
-                  <i className="cartIconAll fas fa-shopping-cart"></i>
-                </span>
-              </span>
-            </div>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      {loading && <div className="loader"></div>}
+
+      {!loading && (
+        <div className="foodItems">
+          {state.map((item, index) => {
+            return (
+              <div className="menuItem" key={item.id}>
+                <div className="dishImgBox">
+                  <img src={item.image} alt={item.title} className="dishImg" />
+                </div>
+                <div
+                  className={`${isClick_}`}
+                  onClick={(event) => {
+                    dispatch(addnRemoveCart(item));
+                    !click ? setClick(true) : setClick(false);
+                  }}
+                >
+                  <span className="title">{item.title}</span>
+                  <span className="label">{item.label}</span>
+                  <span className="brand">{item.brand}</span>
+                  <span className="prices">NGN{item.price}</span>
+                  <span style={{ overflow: "hidden" }}>
+                    <span className="itemRatings">
+                      <span
+                        className="fa fa-star "
+                        style={{ color: "red" }}
+                      ></span>
+                      <span
+                        className="fa fa-star"
+                        style={{ color: "red" }}
+                      ></span>
+                      <span
+                        className="fa fa-star"
+                        style={{ color: "red" }}
+                      ></span>
+                      <span className="fa fa-star "></span>
+                      <span className="fa fa-star"></span>
+                    </span>
+                  </span>
+                  <span className="addCart">
+                    Add To{" "}
+                    <span>
+                      <i className="cartIconAll fas fa-shopping-cart"></i>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </>
   );
 }

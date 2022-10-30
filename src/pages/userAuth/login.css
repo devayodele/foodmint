@@ -34,7 +34,7 @@
   font-weight: 600;
 }
 
-.textBox {
+.textBox_login_ {
   display: flex;
   width: 350px;
   margin: 30px auto;
@@ -86,7 +86,7 @@
   text-align: center;
 }
 
-.btnDiv {
+.btnDiv_login {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -170,11 +170,13 @@
     font-weight: 600;
   }
 
-  .textBox {
+  .textBox_login_ {
     display: flex;
     width: 100vw;
     margin: 30px auto;
     overflow: visible;
+    position: relative;
+    left: 14vw;
   }
 
   .envelope {
@@ -185,9 +187,7 @@
   }
 
   #login__textBox {
-    position: relative;
-    left: 8vw;
-    width: 80vw;
+    width: 70vw;
     padding-left: 40px;
     font-size: 15px;
     border-radius: 10px;
@@ -206,10 +206,7 @@
   }
 
   #password__textBox_ {
-    position: relative;
-    left: 10vw;
-
-    width: 80vw;
+    width: 70vw;
     padding-left: 40px;
     font-size: 15px;
     border-radius: 10px;
@@ -227,7 +224,7 @@
     text-align: center;
   }
 
-  .btnDiv {
+  .btnDiv_login {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -238,6 +235,8 @@
     padding-right: 20vw;
     border-radius: 5px;
     overflow: visible;
+    position: relative;
+    left: 4vw;
   }
 
   .login__btn {

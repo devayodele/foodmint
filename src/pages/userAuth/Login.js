@@ -2,20 +2,22 @@ import React, { useState, useEffect } from "react";
 import "./login.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate, Link } from "react-router-dom";
-import { auth, signInWithGoogle, loginWithEmailAndPassword } from "./firebase";
+import {
+  auth,
+  signInWithGoogle,
+  loginWithEmailAndPassword,
+  googleProvider,
+} from "./firebase";
 
 export default function Login() {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (loading)
-      if (user)
-        /*.....*/
-
-        navigate("./dashboard");
+    if (user) navigate("/dashboard", { replace: true });
   }, [loading, user]);
 
   return (
@@ -30,7 +32,7 @@ export default function Login() {
       <h3 id="header">Log in to FoodMint</h3>
       <p id="instruction">Enter your email address and password.</p>
       <div id="inputContainer">
-        <div className="textBox">
+        <div className="textBox_login_">
           <span className="envelope">
             <i className="fa fa-envelope" style={{ fontSize: "20px" }}></i>
           </span>
@@ -42,7 +44,7 @@ export default function Login() {
             placeholder="Email"
           />
         </div>
-        <div className="textBox">
+        <div className="textBox_login_">
           <span className="envelope">
             <i className="fa fa-lock" style={{ fontSize: "20px" }}></i>
           </span>
@@ -59,14 +61,19 @@ export default function Login() {
             Forgot your password?
           </Link>
         </div>
-        <div className="btnDiv">
+        <div className="btnDiv_login">
           <button
             className="login__btn"
             onClick={() => loginWithEmailAndPassword(email, password)}
           >
             Log in
           </button>
-          <button className="login__google" onClick={signInWithGoogle}>
+          <button
+            className="login__google"
+            onClick={() => {
+              signInWithGoogle(auth, googleProvider);
+            }}
+          >
             Login with Google
           </button>
         </div>

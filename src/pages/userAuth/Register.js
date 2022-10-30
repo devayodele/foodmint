@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./register.css";
 import {
   auth,
+  googleProvider,
   registerWithEmailAndPassword,
   signInWithGoogle,
 } from "./firebase";
@@ -15,12 +16,12 @@ export default function Register() {
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
 
-  const register = () => {
+  const register = (email, password) => {
     if (!name) alert("Please enter name");
 
     if (!email) alert("Please enter email");
 
-    registerWithEmailAndPassword(name, email, password);
+    registerWithEmailAndPassword(email, password);
   };
 
   useEffect(() => {
@@ -39,8 +40,16 @@ export default function Register() {
       </div>
       <p id="header">Create a FoodMint account</p>
       <p id="instruction">Sign up with your email and a password.</p>
-
-      <div className="textBox">
+      <div className="textBox-reg_" id="reg_input_name">
+        <input
+          type="text"
+          id="register__textBox"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Full Name"
+        />
+      </div>
+      <div className="textBox-reg_">
         <span className="envelope">
           <i className="fa fa-envelope" style={{ fontSize: "20px" }}></i>
         </span>
@@ -52,7 +61,7 @@ export default function Register() {
           placeholder="Email"
         />
       </div>
-      <div className="textBox">
+      <div className="textBox-reg_">
         <span className="envelope">
           <i className="fa fa-lock" style={{ fontSize: "20px" }}></i>
         </span>
@@ -64,12 +73,22 @@ export default function Register() {
           placeholder="Password"
         />
       </div>
-      <div className="btnDiv">
-        <button id="register__btn" onClick={register}>
+      <div className="btnDiv-reg_">
+        <button
+          id="register__btn"
+          onClick={() => {
+            register(email, password);
+          }}
+        >
           Register
         </button>
 
-        <button id="register__google" onClick={signInWithGoogle}>
+        <button
+          id="register__google"
+          onClick={() => {
+            signInWithGoogle(auth, googleProvider);
+          }}
+        >
           Register with Google
         </button>
       </div>

@@ -12,6 +12,10 @@
   overflow: hidden;
 }
 
+.header a {
+  text-decoration: none;
+}
+
 #logoDiv {
   height: 82px;
   display: flex;

@@ -9,8 +9,9 @@ import Cart from "./pages/cartPage/Cart";
 import Login from "./pages/userAuth/Login";
 import Register from "./pages/userAuth/Register";
 import Reset from "./pages/userAuth/Reset";
-import Dashboard from "./pages/userAuth/Dashboard.Js";
+import Dashboard from "./pages/userAuth/Dashboard";
 import Checkout from "./pages/checkout/Checkout";
+import PageNotFound from "./pages/pageNotFound/PageNotFound";
 
 function App() {
   useEffect(() => {}, []);
@@ -26,8 +27,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/reset" element={<Reset />} />
-          <Route path="/reset" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
     </GlobalState>

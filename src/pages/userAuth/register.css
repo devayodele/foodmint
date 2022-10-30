@@ -40,15 +40,27 @@
   z-index: 1000;
 }
 
+.textBox-reg_ {
+  margin-bottom: 20px;
+}
+
+#reg_input_name input {
+  position: relative;
+  left: -10px;
+  padding-left: 20px;
+}
+
 #register__textBox {
   width: 350px;
-  padding-left: 40px;
+  padding-left: 20px;
   font-size: 15px;
   border-radius: 10px;
   border: 1px solid gray;
   outline: none;
   font-weight: 600;
   height: 35px;
+  position: relative;
+  left: -0.3vw;
 }
 
 #password__textBox:focus,
@@ -61,7 +73,7 @@
 
 #password__textBox {
   width: 350px;
-  padding-left: 40px;
+  padding-left: 20px;
   font-size: 15px;
   border-radius: 10px;
   border: 1px solid gray;
@@ -69,6 +81,8 @@
   font-weight: 600;
   height: 35px;
   margin-left: 7px;
+  position: relative;
+  left: -0.3vw;
 }
 
 .forgotLink {
@@ -79,7 +93,7 @@
   text-align: center;
 }
 
-.btnDiv {
+.btnDiv-reg_ {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -169,10 +183,18 @@
     z-index: 1000;
   }
 
-  #register__textBox {
-    width: 85vw;
+  .textBox-reg_ {
     position: relative;
-    left: 6vw;
+    margin-bottom: 20px;
+  }
+
+  #reg_input_name input {
+    position: relative;
+    left: -4px;
+  }
+
+  #register__textBox {
+    width: 70vw;
     padding-left: 40px;
     font-size: 15px;
     border-radius: 10px;
@@ -191,7 +213,7 @@
   }
 
   #password__textBox {
-    width: 85vw;
+    width: 70vw;
     padding-left: 40px;
     font-size: 15px;
     border-radius: 10px;
@@ -199,8 +221,6 @@
     outline: none;
     font-weight: 600;
     height: 35px;
-    position: relative;
-    left: 6vw;
   }
 
   .forgotLink {
@@ -211,7 +231,7 @@
     text-align: center;
   }
 
-  .btnDiv {
+  .btnDiv-reg_ {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -221,6 +241,7 @@
     width: 100vw;
     margin: 0 auto;
     position: relative;
+    left: -9vw;
     border: none;
     overflow: visible;
   }
@@ -229,8 +250,7 @@
     border: none;
     padding: 10px;
     font-size: 18px;
-    position: relative;
-    left: 9vw;
+
     width: 70vw;
     border-radius: 5px;
     color: white;
@@ -241,8 +261,7 @@
   #register__google {
     color: white;
     background-color: #1f51ff;
-    position: relative;
-    left: 9vw;
+
     width: 70vw;
     border-radius: 5px;
     padding: 10px;

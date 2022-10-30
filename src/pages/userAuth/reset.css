@@ -20,7 +20,7 @@
   font-weight: 600;
 }
 
-.textBox {
+.textBox-reset_ {
   display: flex;
   width: 350px;
   margin: 30px auto;
@@ -33,7 +33,7 @@
   z-index: 1000;
 }
 
-#reset__textBox {
+#reset__textBox_ {
   width: 350px;
   padding-left: 40px;
   font-size: 15px;
@@ -86,11 +86,30 @@ button {
     justify-content: center;
   }
 
+  .textBox-reset_ {
+    display: flex;
+    width: 350px;
+    margin: 30px auto;
+    overflow: visible;
+    position: relative;
+    left: 13vw;
+  }
+
   #reset__textBox_ {
-    padding: 10px;
+    padding-left: 30px;
+    height: 40px;
     font-size: 18px;
     margin-bottom: 10px;
-    width: 85vw;
+    width: 70vw;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 5px;
+  }
+
+  #reset__textBox_:hover,
+  #reset__textBox_:focus {
+    outline: none;
+    border: 1px solid #ff7d4d;
   }
 
   #header {
@@ -107,25 +126,16 @@ button {
     font-weight: 600;
   }
 
-  .textBox {
-    display: flex;
-    margin: 30px auto;
-    overflow: visible;
-    width: 85vw;
-    position: relative;
-    left: 3vw;
-  }
-
   .envelope {
     position: relative;
-    left: 1vw;
+    left: -1vw;
     margin-top: 8px;
 
     z-index: 1000;
   }
 
   #reset__textBox {
-    width: 85vw;
+    width: 70vw;
     font-size: 15px;
     border-radius: 10px;
     border: 1px solid gray;
@@ -136,15 +146,16 @@ button {
 
   #btnDiv {
     margin: 0 auto;
-    margin-right: 5px;
+    margin-right: 20px;
+    position: relative;
+    left: 2.5vw;
   }
 
   button {
     border: none;
     padding: 10px;
     font-size: 18px;
-    position: relative;
-    left: 3vw;
+
     width: 70vw;
     border-radius: 5px;
     color: white;

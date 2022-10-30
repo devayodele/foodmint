@@ -3,7 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./dashboard.css";
-import { auth, db, logout } from "./firebase";
+import { auth, db, logOut } from "./firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 
 export default function Dashboard() {
@@ -21,6 +21,10 @@ export default function Dashboard() {
       alert("An error occured while fetching user data");
     }
   };
+
+  const Logout = () => {
+    logOut(auth);
+  };
   useEffect(() => {
     if (loading) return;
     if (!user) return navigate("/");
@@ -33,9 +37,9 @@ export default function Dashboard() {
         <div>{user?.displayName}</div>
         <div>{user?.email}</div>
         <button className=".dashboard__btnLink">
-          <Link to="./checkout">Go to checkcout</Link>
+          <Link to="/checkout">Go to checkcout</Link>
         </button>
-        <button className="dashboard__btn" onClick={logout}>
+        <button className="dashboard__btn" onClick={Logout}>
           Logout
         </button>
       </div>

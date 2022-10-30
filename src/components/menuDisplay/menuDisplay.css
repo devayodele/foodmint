@@ -85,13 +85,20 @@
 }
 
 @media screen and (max-width: 480px) {
+  #menuHome {
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+    animation: menuSlide 2s ease 1 forwards;
+    margin-bottom: -80px;
+  }
   @keyframes menuSlide {
     0% {
-      top: 200px;
+      top: 50px;
     }
 
     100% {
-      top: -40px;
+      top: -120px;
     }
   }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./dropdownMenu.css";
 
 export default function DropDownMenu() {
@@ -21,16 +22,16 @@ export default function DropDownMenu() {
           <span></span>
           <span></span>
           <ul id="menu">
-            <a href="#">
+            <Link to="/">
               <li>Home</li>
-            </a>
-            <a href="#">
+            </Link>
+            <a href="#aboutDiv">
               <li>About</li>
             </a>
-            <a href="#">
-              <li>Info</li>
+            <a href="#experts">
+              <li>Team</li>
             </a>
-            <a href="#">
+            <a href="#contact_div">
               <li>Contact</li>
             </a>
           </ul>

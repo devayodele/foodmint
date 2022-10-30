@@ -14,29 +14,31 @@ export default function MobileNav() {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/menu", { replace: true });
+    navigate(`/menu/${value}/popular`);
   };
 
   const handleOnchange = (e) => {
     setValue(e.target.value);
   };
   const handleSubmit = (e) => {
-    e.preventDefault();
+    navigate(`/menu/${value}/popular`);
   };
 
   return (
     <>
       <div id="mobileNav">
-        <div id="LogoDivMobile">
-          <img
-            src="https://cdn3.vectorstock.com/i/1000x1000/19/12/fork-spoon-and-knife-sign-orange-icon-on-black-vector-13391912.jpg"
-            alt="logo"
-          />
-          <div id="foodMintM">
-            <span id="foodM">FOOD</span>
-            <span id="mintM">MINT</span>
+        <Link to="/">
+          <div id="LogoDivMobile">
+            <img
+              src="https://cdn3.vectorstock.com/i/1000x1000/19/12/fork-spoon-and-knife-sign-orange-icon-on-black-vector-13391912.jpg"
+              alt="logo"
+            />
+            <div id="foodMintM">
+              <span id="foodM">FOOD</span>
+              <span id="mintM">MINT</span>
+            </div>
           </div>
-        </div>
+        </Link>
 
         <div id="headerBtnDiv_">
           <div className="headerBtn">
@@ -44,7 +46,7 @@ export default function MobileNav() {
               <i className={userIcon_}></i>
             </NavLink>
           </div>
-          <div className="cartBox_">
+          <div className="cartBox__">
             <NavLink to="/cart" className="navLink">
               <div className="counter">
                 <span>{counter.length}</span>

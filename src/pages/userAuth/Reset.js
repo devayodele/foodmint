@@ -29,13 +29,13 @@ export default function Reset() {
         To reset your password, enter the email address you use to sign in.
       </p>
       <div id="inputContainer">
-        <div className="textBox">
+        <div className="textBox-reset_">
           <span className="envelope">
             <i className="fa fa-envelope" style={{ fontSize: "20px" }}></i>
           </span>
           <input
             type="text"
-            id="reset__textBox"
+            id="reset__textBox_"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
@@ -43,7 +43,7 @@ export default function Reset() {
         </div>
 
         <div id="btnDiv">
-          <button onClick={() => sendPasswordReset(email)}>
+          <button onClick={() => sendPasswordReset(auth, email)}>
             Get reset link
           </button>
         </div>
