@@ -1,0 +1,202 @@
+.serviceSect {
+  width: 90vw;
+  text-align: center;
+  height: auto;
+  margin: 100px auto 0 auto;
+}
+
+.serviceSect h2 {
+  font-weight: 700;
+
+  overflow: hidden;
+}
+
+.serviceBtn {
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid #ff7d4d;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #ff7d4d;
+  margin-bottom: 20px;
+  width: 120px;
+}
+
+#serviceDiv {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 30px auto;
+  height: auto;
+  width: auto;
+}
+
+.serviceOptDiv {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  margin: 10px 20px 0 20px;
+}
+
+#serviceImg img {
+  height: 350px;
+  padding: 20px;
+}
+
+.serviceOption {
+  box-shadow: 0 0 8px 5px #e5e4e2;
+  -webkit-box-shadow: 0 0 8px 5px #e5e4e2;
+  overflow: visible;
+  transition: background-color 0.5s ease;
+  height: auto;
+  width: 380px;
+  text-align: left;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 20px;
+}
+
+.serviceHeaderOpt {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.smsIconDiv,
+.storeIconDiv,
+.orderCartDiv,
+.hotlineDiv {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #ff7d4d;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smsIcon,
+.storeIcon,
+.orderCart,
+.hotline {
+  font-size: 20px;
+  color: #fff;
+}
+
+.servicePara {
+  color: #525250;
+}
+
+@media screen and (max-width: 480px) {
+  .serviceSect {
+    width: 90vw;
+    text-align: center;
+    height: auto;
+    margin: 100px auto 0 auto;
+    overflow: visible;
+  }
+
+  .serviceSect h2 {
+    font-weight: 700;
+    overflow: hidden;
+    font-size: 20px;
+  }
+
+  .serviceBtn {
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid #ff7d4d;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #ff7d4d;
+    margin-bottom: 20px;
+    width: 120px;
+  }
+
+  #serviceDiv {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .serviceOptDiv {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    overflow: visible;
+  }
+
+  #serviceImg {
+    margin: 0 auto;
+    overflow: visible;
+    width: 100vw;
+    display: flex;
+    justify-items: center;
+  }
+
+  #serviceImg img {
+    height: 85vw;
+    width: 85vw;
+  }
+
+  .serviceOption {
+    box-shadow: 0 0 8px 5px #e5e4e2;
+    -webkit-box-shadow: 0 0 8px 5px #e5e4e2;
+    overflow: visible;
+    transition: background-color 0.5s ease;
+    height: auto;
+    width: 80vw;
+    text-align: left;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+  }
+
+  .serviceHeaderOpt {
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  .smsIconDiv,
+  .storeIconDiv,
+  .orderCartDiv,
+  .hotlineDiv {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #ff7d4d;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .smsIcon,
+  .storeIcon,
+  .orderCart,
+  .hotline {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .servicePara {
+    color: #525250;
+  }
+}

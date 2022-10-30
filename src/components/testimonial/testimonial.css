@@ -1,0 +1,346 @@
+.testimonialDiv {
+  position: relative;
+  top: 50px;
+  margin-bottom: 170px;
+  height: auto;
+}
+
+.reviewDiv {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://c4.wallpaperflare.com/wallpaper/374/404/846/brown-bird-perching-during-daytime-wren-wren-wallpaper-preview.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  width: 100vw;
+  text-align: center;
+  overflow: visible;
+}
+
+.container-xl {
+  position: relative;
+  right: 5vw;
+  height: auto;
+  overflow: visible;
+  margin: 0 auto;
+}
+.row {
+  height: auto;
+  overflow: visible;
+  margin: 0 auto;
+}
+
+.col-lg-8 {
+  height: auto;
+  padding: 20px 0;
+  overflow: visible;
+  margin: 0 auto;
+}
+
+#testimonials {
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  position: relative;
+  top: 70px;
+  left: 80px;
+  margin: 0 auto;
+  overflow: visible;
+  z-index: 999;
+}
+
+#testimonials::after {
+  margin: 0;
+  content: "";
+  width: 100px;
+  position: absolute;
+  margin: 0 auto;
+  height: 3px;
+  background: #8fbc54;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+}
+.col-center {
+  margin: 0 auto;
+  float: none !important;
+}
+
+.carousel {
+  padding: 0 70px;
+  height: auto;
+  overflow: visible;
+  min-width: 900px;
+}
+
+.carousel .carousel-item {
+  padding-top: 120px;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  overflow: visible;
+  min-height: 400px;
+  background-color: #fff;
+}
+.carousel .carousel-item .img-box {
+  width: 135px;
+  height: 135px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+.carousel .img-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+.carousel .testimonial {
+  padding: 30px 50px 30px 50px;
+  height: auto;
+}
+.carousel .overview {
+  font-style: italic;
+  margin-bottom: 60px;
+}
+.carousel .overview b {
+  text-transform: uppercase;
+  color: #7aa641;
+}
+.carousel-control-prev {
+  position: relative;
+  top: -200px;
+  left: -355px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin-top: -20px;
+  overflow: visible;
+  background: none;
+}
+
+.carousel-control-next {
+  position: relative;
+  top: -240px;
+  left: 355px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin-top: -20px;
+  overflow: visible;
+  background: none;
+}
+.carousel-control-prev i,
+.carousel-control-next i {
+  font-size: 34px;
+  line-height: 42px;
+  height: auto;
+  overflow: visible;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.carousel-indicators {
+  bottom: 90px;
+}
+.carousel-indicators li,
+.carousel-indicators li.active {
+  width: 12px;
+  height: 12px;
+  margin: 1px 3px;
+  border-radius: 50%;
+  border: none;
+}
+.carousel-indicators li {
+  background: #999;
+  border-color: transparent;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.carousel-indicators li.active {
+  background: #555;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 480px) {
+  .testimonialDiv {
+    position: relative;
+    top: 50px;
+    margin-bottom: 170px;
+    height: auto;
+    overflow: visible;
+  }
+
+  .reviewDiv {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("https://c4.wallpaperflare.com/wallpaper/374/404/846/brown-bird-perching-during-daytime-wren-wren-wallpaper-preview.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 670px;
+    width: 100vw;
+    text-align: center;
+  }
+
+  .container-xl {
+    position: relative;
+    right: 0;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .row {
+    height: auto;
+    overflow: visible;
+    margin: 0 auto;
+  }
+
+  .col-lg-8 {
+    height: auto;
+    padding: 20px 0;
+
+    margin: 0 auto;
+  }
+
+  #testimonials {
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: 70px;
+    left: 0vw;
+    margin: 0 auto;
+    overflow: visible;
+    z-index: 999;
+  }
+
+  #testimonials::after {
+    margin: 0;
+    content: "";
+    width: 100px;
+    position: absolute;
+    margin: 0 auto;
+    height: 3px;
+    background: #8fbc54;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+  }
+  .col-center {
+    margin: 0 auto;
+    float: none !important;
+  }
+
+  .carousel {
+    padding: 0 20px;
+    height: auto;
+    min-width: 80vw;
+    margin: 0 auto;
+  }
+
+  .carousel .carousel-item {
+    padding-top: 120px;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    height: 600px;
+    background-color: #fff;
+    width: 80vw;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .testimonial {
+    width: 90vw;
+    text-align: center;
+    position: relative;
+    right: 20px;
+  }
+
+  .carousel .carousel-item .img-box {
+    width: 135px;
+    height: 135px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+  }
+
+  .carousel .img-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+  }
+
+  .carousel .testimonial {
+    padding: 10px 50px 10px 50px;
+    height: auto;
+  }
+  .carousel .overview {
+    font-style: italic;
+    margin-bottom: 60px;
+  }
+  .carousel .overview b {
+    text-transform: uppercase;
+    color: #7aa641;
+  }
+  .carousel-control-prev {
+    position: relative;
+    top: -350px;
+    left: -33vw;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin-top: -20px;
+    overflow: visible;
+    background: none;
+  }
+
+  .carousel-control-next {
+    position: relative;
+    top: -392px;
+    left: 33vw;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin-top: -20px;
+    overflow: visible;
+    background: none;
+  }
+  .carousel-control-prev i,
+  .carousel-control-next i {
+    font-size: 34px;
+    line-height: 42px;
+    height: auto;
+    overflow: visible;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+  }
+  .carousel-indicators {
+    bottom: 90px;
+  }
+  .carousel-indicators li,
+  .carousel-indicators li.active {
+    width: 12px;
+    height: 12px;
+    margin: 1px 3px;
+    border-radius: 50%;
+    border: none;
+  }
+  .carousel-indicators li {
+    background: #999;
+    border-color: transparent;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  .carousel-indicators li.active {
+    background: #555;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}

@@ -1,0 +1,661 @@
+.cartContainer {
+  width: 90vw;
+  height: auto;
+  margin: 120px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Times New Roman", Times, serif;
+  padding-bottom: 10px;
+}
+
+.itemCon {
+  width: 67%;
+  border: 1px solid #e5e4e2;
+  border-radius: 10px;
+}
+
+.cartHeader {
+  padding: 15px 0 0 30px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+}
+
+.verticalDash {
+  width: 2px;
+  height: 17px;
+  background-color: #79778d;
+  margin: 0 6px;
+}
+
+.emptyCart {
+  font-size: 27px;
+  font-weight: 600;
+  color: #ff7d4d;
+}
+
+.addToCart {
+  font-size: 22px;
+  font-weight: 500px;
+}
+
+.emptyCart,
+.addToCart {
+  text-align: center;
+}
+
+.itemList {
+  padding: 0 30px;
+}
+
+.itemDiv {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+  overflow: visible;
+}
+
+.firstDiv {
+  height: 90px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  overflow: hidden;
+  overflow: visible;
+}
+
+.itemImage {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: auto;
+  font-weight: bold;
+  margin-left: 30px;
+  padding: 5px;
+}
+.itemDetails span {
+  height: auto;
+}
+
+.secondDiv {
+  text-align: center;
+}
+
+.quantityDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.decrement,
+.increment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 21px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  border: 1px solid #ffac1c;
+  border-radius: 5px;
+  background-color: #fff5ee;
+}
+
+.decrement:hover,
+.increment:hover {
+  background-color: #ff7d4d;
+  color: #fff;
+}
+
+.quantityDigit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 21px;
+  border-radius: 3px;
+  font-size: 18x;
+  font-weight: bold;
+  padding: 9px;
+}
+
+.quantityText {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+  color: #a9a9a9;
+}
+
+.subTotal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 60px;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+.cartInfo {
+  width: 31%;
+  height: auto;
+}
+
+.address {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 135px;
+  border: 1px solid #e5e4e2;
+  padding-top: 25px;
+  border-radius: 10px;
+}
+
+.addressBox h5 {
+  font-weight: 700;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.icon {
+  border: 1px solid #ff7d4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+.input {
+  height: 32px;
+  width: 200px;
+  border-radius: 5px;
+  border: 0.5px solid #000;
+  padding: 5px;
+}
+
+.input:focus,
+.input:hover {
+  border: 0.5px solid #ff7d4d;
+  outline: none;
+}
+
+.paymentBox {
+  padding: 20px 0;
+  height: auto;
+  border: 1px;
+  border: 1px solid #e5e4e2;
+}
+
+.paymentBox h5 {
+  font-weight: 700;
+  width: 70vw;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  margin-right: 40px;
+}
+
+.icon_pen_ {
+  border: 1px solid #ff7d4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  overflow: visible;
+}
+
+.inputDiv {
+  display: flex;
+  align-items: center;
+}
+
+.riderBox {
+  height: 170px;
+  padding: 15px 40px;
+  border: 1px solid #e5e4e2;
+}
+
+.riderBox h5 {
+  font-weight: 700;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.riderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.riderDetails {
+  display: flex;
+}
+
+.payableAmount {
+  padding: 20px 0;
+  height: auto;
+  border: 1px solid #e5e4e2;
+  color: #818589;
+}
+
+.payableAmount h5 {
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+  padding-left: 40px;
+  overflow: hidden;
+  color: #000;
+}
+
+.charges {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  padding-right: 35px;
+}
+
+.cost {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.grandTotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  height: 80px;
+  font-weight: 500;
+  border: 1px solid #e5e4e2;
+  overflow: hidden;
+}
+
+.grandTotal h5 {
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+#checkProcede {
+  height: 50px;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0 auto;
+  background: green;
+  text-align: center;
+  padding-top: 15px;
+  color: #fff;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .cartContainer {
+    width: 90vw;
+    height: auto;
+    margin: 120px auto 0 auto;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Times New Roman", Times, serif;
+    padding-bottom: 10px;
+  }
+
+  .itemCon {
+    width: 100vw;
+    border: 1px solid #e5e4e2;
+    border-radius: 10px;
+  }
+
+  .cartHeader {
+    padding: 15px 0 0 30px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+  }
+
+  .verticalDash {
+    width: 2px;
+    height: 17px;
+    background-color: #79778d;
+    margin: 0 6px;
+  }
+
+  .emptyCart {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ff7d4d;
+  }
+
+  .addToCart {
+    font-size: 20x;
+    font-weight: 500px;
+  }
+
+  .emptyCart,
+  .addToCart {
+    text-align: center;
+  }
+
+  .itemList {
+    padding: 0 30px;
+  }
+
+  .itemDiv {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+    overflow: visible;
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .firstDiv {
+    height: auto;
+    padding-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    overflow: hidden;
+    overflow: visible;
+  }
+
+  .itemImage {
+    width: 60px;
+    height: 55px;
+    border-radius: 50%;
+  }
+  .itemDetails {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: auto;
+    font-weight: bold;
+    margin-left: 30px;
+    padding: 5px;
+  }
+  .itemDetails span {
+    height: auto;
+  }
+
+  .secondDiv {
+    text-align: center;
+  }
+
+  .quantityDiv {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .decrement,
+  .increment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 21px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    border: 1px solid #ffac1c;
+    border-radius: 5px;
+    background-color: #fff5ee;
+  }
+
+  .decrement:hover,
+  .increment:hover {
+    background-color: #ff7d4d;
+    color: #fff;
+  }
+
+  .quantityDigit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 21px;
+    border-radius: 3px;
+    font-size: 18x;
+    font-weight: bold;
+    padding: 9px;
+  }
+
+  .quantityText {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: #a9a9a9;
+  }
+
+  .subTotal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: center;
+    height: 60px;
+    margin-bottom: 7px;
+    font-weight: bold;
+  }
+
+  .cartInfo {
+    width: 90vw;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .address {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 135px;
+    border: 1px solid #e5e4e2;
+    padding-top: 25px;
+    border-radius: 10px;
+    padding-right: 20px;
+  }
+
+  .addressBox h5 {
+    font-weight: 700;
+    overflow: hidden;
+  }
+
+  .icon {
+    border: 1px solid #ff7d4d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 30px;
+    border-radius: 5px;
+  }
+
+  .icon_pen_ {
+    border: 1px solid #ff7d4d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    overflow: visible;
+    position: relative;
+    left: 2vw;
+  }
+
+  .input {
+    height: 32px;
+    width: 200px;
+    border-radius: 5px;
+    border: 0.5px solid #000;
+    padding: 5px;
+  }
+
+  .input:focus,
+  .input:hover {
+    border: 0.5px solid #ff7d4d;
+    outline: none;
+  }
+
+  .paymentBox {
+    padding: 20px 10px 20px 0;
+    height: auto;
+    border: 1px;
+    border: 1px solid #e5e4e2;
+  }
+
+  .paymentBox h5 {
+    font-weight: 700;
+    overflow: hidden;
+  }
+
+  .payment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+
+    overflow: visible;
+  }
+
+  .inputDiv {
+    display: flex;
+    align-items: center;
+  }
+
+  .riderBox {
+    height: 170px;
+    padding: 15px 40px;
+    border: 1px solid #e5e4e2;
+  }
+
+  .riderBox h5 {
+    font-weight: 700;
+    overflow: hidden;
+  }
+
+  .riderHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .riderDetails {
+    display: flex;
+  }
+
+  .payableAmount {
+    padding: 20px 0;
+    height: auto;
+    border: 1px solid #e5e4e2;
+    color: #818589;
+  }
+
+  .payableAmount h5 {
+    text-align: left;
+    font-weight: 700;
+    padding-left: 40px;
+    overflow: hidden;
+    color: #000;
+  }
+
+  .charges {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    padding-right: 35px;
+  }
+
+  .cost {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .grandTotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    height: 80px;
+    font-weight: 500;
+    border: 1px solid #e5e4e2;
+    overflow: hidden;
+  }
+
+  .grandTotal h5 {
+    overflow: hidden;
+    font-weight: 700;
+  }
+
+  .link {
+    text-decoration: none;
+  }
+
+  .link:hover {
+    text-decoration: none;
+  }
+
+  #checkProcede {
+    height: 50px;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0 auto;
+    background: green;
+    text-align: center;
+    color: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,160 @@
+.header {
+  position: fixed;
+  margin: 0 auto;
+  height: 82px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #000;
+  z-index: 999;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+#logoDiv {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  width: 200px;
+  overflow: visible;
+}
+
+#foodMint {
+  width: auto;
+  overflow: visible;
+}
+
+.foodH_ {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mintH_ {
+  font-size: 22px;
+  color: #ff4500;
+  font-weight: 700;
+}
+
+#logoDiv img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: visible;
+}
+
+.headerBtn {
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
+  width: auto;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.4s ease-in 0s;
+}
+
+.navLink:hover,
+.link:hover {
+  color: #ff7d4d;
+  text-decoration: none;
+}
+
+.searchBoxContainer {
+  display: flex;
+  justify-items: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.searchBox {
+  width: 25vw;
+  border-radius: 15px;
+  padding-left: 5px;
+  height: 40px;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  font-weight: 600;
+  outline: none;
+  background-color: #fff;
+  transition: box-shadow 0.5s linear;
+}
+
+.searchBox:hover {
+  box-shadow: inset 2px 2px 10px #ff7d4d;
+}
+
+.flexDiv {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 40px;
+  margin-left: -32px;
+}
+
+.searchIcon {
+  /*color: #088f8f;*/
+  font-size: 28px;
+  color: black;
+}
+
+.userIcon {
+  overflow: visible;
+  font-size: 30px;
+  transition: color 0.3s ease-in 0s;
+  margin: 5px auto auto 15px;
+  color: #fff;
+}
+
+.userIcon:hover {
+  color: #ff7d4d;
+}
+
+.cartBox {
+  padding-right: 50px;
+  border: none;
+  height: auto;
+  font-weight: 600;
+  transition: color 0.4s ease-in 0s;
+}
+
+.cartIcon {
+  font-size: 26px;
+  z-index: 1;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.cartIcon:hover {
+  color: #ff7d4d;
+}
+
+.counter {
+  width: 22px;
+  height: 22px;
+  background-color: #ff7d4d;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-left: 25px;
+  margin-bottom: -5px;
+  position: relative;
+  z-index: 2000;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    display: none;
+  }
+}
