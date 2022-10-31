@@ -1,15 +1,13 @@
 import React, { useState, useCallback, useEffect } from "react";
 import "./popularFood.css";
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { addnRemoveCart } from "../../store/cartSlice";
 
 export default function PopularFood() {
   const [state, setState] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [click, setClick] = useState(false);
-
-  const isClick_ = !click ? "dishDetails" : "isClicked_ ";
+  const cart = useSelector((state) => state.items.cart);
 
   const dispatch = useDispatch();
 
@@ -154,17 +152,28 @@ export default function PopularFood() {
                   <img src={item.image} alt={item.title} className="dishImg" />
                 </div>
                 <div
-                  className={`${isClick_}`}
+                  className={
+                    cart.find((elem) => elem.id === item.id)
+                      ? "isClicked_"
+                      : "dishDetails"
+                  }
                   onClick={(event) => {
                     dispatch(addnRemoveCart(item));
-                    !click ? setClick(true) : setClick(false);
                   }}
                 >
                   <span className="title">{item.title}</span>
-                  <span className="label">{item.label}</span>
+                  <span
+                    className={
+                      cart.find((elem) => elem.id === item.id)
+                        ? "_label_"
+                        : "label"
+                    }
+                  >
+                    {item.label}
+                  </span>
                   <span className="brand">{item.brand}</span>
                   <span className="prices">NGN{item.price}</span>
-                  <span style={{ overflow: "hidden" }}>
+                  <span style={{ overflow: "visible" }}>
                     <span className="itemRatings">
                       <span
                         className="fa fa-star "
@@ -182,10 +191,24 @@ export default function PopularFood() {
                       <span className="fa fa-star"></span>
                     </span>
                   </span>
-                  <span className="addCart">
-                    Add To{" "}
+                  <span
+                    className={
+                      cart.find((elem) => elem.id === item.id)
+                        ? "_addCart__"
+                        : "addCart"
+                    }
+                  >
+                    {cart.find((elem) => elem.id === item.id)
+                      ? "Added To   "
+                      : "Add To"}
                     <span>
-                      <i className="cartIconAll fas fa-shopping-cart"></i>
+                      <i
+                        className={
+                          cart.find((elem) => elem.id === item.id)
+                            ? "  _cartIconAll_ fas fa-shopping-cart"
+                            : "cartIconAll fas fa-shopping-cart"
+                        }
+                      ></i>
                     </span>
                   </span>
                 </div>

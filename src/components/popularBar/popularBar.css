@@ -1,7 +1,7 @@
 #popularBarDiv {
   display: flex;
   width: 80vw;
-  margin: 100px auto 30px auto;
+  margin: 20px auto 30px auto;
   color: #000;
   justify-content: flex-start;
   align-items: center;

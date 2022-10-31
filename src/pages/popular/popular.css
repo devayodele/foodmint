@@ -1,0 +1,14 @@
+#err_query_para_ {
+  text-align: center;
+  margin: 30px auto;
+  width: 70vw;
+}
+
+#err_query_para_ a {
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+#err_query_para_ a:hover {
+  font-weight: 600;
+}

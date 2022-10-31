@@ -1,16 +1,31 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./allFood.css";
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addnRemoveCart } from "../../store/cartSlice";
 
 export default function AllFood() {
   const [state, setState] = useState([]);
+  const [sortOrder, setSortOrder] = useState("");
   const dispatch = useDispatch();
-  const cartIconAll = "cartIconAll   fas fa-shopping-cart";
-  const [loading, setLoading] = useState(false);
 
-  const { mealCat } = useParams(); //
+  let sortedArray;
+  const sortHandler = () => {
+    if (sortOrder === "Low to High") {
+      sortedArray = state.sort((a, b) => (a.price > b.price ? -1 : 1));
+      setState(sortedArray);
+    }
+
+    if (sortOrder === "High to Low") {
+      sortedArray = state.sort((a, b) => (a.price > b.price ? 1 : -1));
+      setState(sortedArray);
+    }
+  };
+
+  const [loading, setLoading] = useState(false);
+  const cart = useSelector((state) => state.items.cart);
+
+  const { mealCat } = useParams();
   let firstItemPrice =
     mealCat === "drinks"
       ? 500
@@ -56,7 +71,7 @@ export default function AllFood() {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6FJVx7VcG7Pi0al4eU7vfqpVqkkxhz9XF9w&usqp=CAU",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQigBirzCyTB9IkG3QTp7nA3tI5j9VDWNKk2g&usqp=CAU ",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5nLnPIpWEdRlCyogbkv_NKDmIet9JTh5wQA&usqp=CAU",
-      "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fburger-png%2Fburger-png-png-images-yellow-images-12.png&imgrefurl=https%3A%2F%2Fwww.freepnglogos.com%2Fpics%2Fburger&tbnid=BQ8vNy3QQWRHjM&vet=12ahUKEwinxvjDx_P6AhWugCcCHbI3AkQQMygXegUIARCLAg..i&docid=k8_fsCRHJy1OFM&w=830&h=630&q=hamburger%20png&ved=2ahUKEwinxvjDx_P6AhWugCcCHbI3AkQQMygXegUIARCLAg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGz5WVLQfxHNTHz9ChkcPInMQczZ5CFWWhKQ&usqp=CAU",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8DTovyQyobp_SLWyMTpdw6O8MxMPv247E9g&usqp=CAU",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhaYQQrAEGe3wOf8nNfsO3cvbyxphy6Qr1AA&usqp=CAU",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8DTovyQyobp_SLWyMTpdw6O8MxMPv247E9g&usqp=CAU",
@@ -150,57 +165,108 @@ export default function AllFood() {
     }
   }, [mealCat]);
 
+  useEffect(() => {
+    sortHandler();
+  }, [sortOrder]);
+
   return (
     <>
       {loading ? (
         <div className="loader"></div>
       ) : (
-        <div className="foodItems">
-          {state.map((item, index) => {
-            return (
-              <div className="menuItem" key={item.id}>
-                <div className="dishImgBox">
-                  <img src={item.image} alt={item.title} className="dishImg" />
-                </div>
-                <div
-                  className="dishDetails"
-                  onClick={(event) => {
-                    dispatch(addnRemoveCart(item));
-                  }}
-                >
-                  <span className="title">{item.title}</span>
-                  <span className="label">{item.label}</span>
-                  <span className="brand">{item.brand}</span>
-                  <span className="prices">NGN{item.price}</span>
-                  <span id="itemRateDiv">
-                    <span id="itemRatings">
+        <>
+          <div id="sort_FormDiv">
+            <label htmlFor="sort_price">Sort by:</label>
+            <select
+              name="sort_price"
+              id="sort_price"
+              onChange={(e) => {
+                setSortOrder(e.target.value);
+              }}
+            >
+              <option value="">Featured</option>
+              <option value="Low to High">Price: Low to High</option>
+              <option value="High to Low">Price: High to Low</option>
+            </select>
+          </div>
+          <div className="foodItems">
+            {state &&
+              state.map((item, index) => {
+                return (
+                  <div className="menuItem" key={item.id}>
+                    <div className="dishImgBox">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="dishImg"
+                      />
+                    </div>
+                    <div
+                      className={
+                        cart.find((elem) => elem.id === item.id)
+                          ? "isClicked_"
+                          : "dishDetails"
+                      }
+                      onClick={(event) => {
+                        dispatch(addnRemoveCart(item));
+                      }}
+                    >
+                      <span className="title">{item.title}</span>
                       <span
-                        className="fa fa-star "
-                        style={{ color: "red" }}
-                      ></span>
+                        className={
+                          cart.find((elem) => elem.id === item.id)
+                            ? "_label_"
+                            : "label"
+                        }
+                      >
+                        {item.label}
+                      </span>
+                      <span className="brand">{item.brand}</span>
+                      <span className="prices">NGN{item.price}</span>
+                      <span style={{ overflow: "visible" }}>
+                        <span className="itemRatings">
+                          <span
+                            className="fa fa-star "
+                            style={{ color: "red" }}
+                          ></span>
+                          <span
+                            className="fa fa-star"
+                            style={{ color: "red" }}
+                          ></span>
+                          <span
+                            className="fa fa-star"
+                            style={{ color: "red" }}
+                          ></span>
+                          <span className="fa fa-star "></span>
+                          <span className="fa fa-star"></span>
+                        </span>
+                      </span>
                       <span
-                        className="fa fa-star"
-                        style={{ color: "red" }}
-                      ></span>
-                      <span
-                        className="fa fa-star"
-                        style={{ color: "red" }}
-                      ></span>
-                      <span className="fa fa-star "></span>
-                      <span className="fa fa-star"></span>
-                    </span>
-                  </span>
-                  <div id="addCartDiv">
-                    <p id="addCart">Add To </p>
-                    <p>
-                      <i className={cartIconAll}></i>
-                    </p>
+                        className={
+                          cart.find((elem) => elem.id === item.id)
+                            ? "_addCart__"
+                            : "addCart"
+                        }
+                      >
+                        {cart.find((elem) => elem.id === item.id)
+                          ? "Added To   "
+                          : "Add To"}
+                        <span>
+                          <i
+                            className={
+                              cart.find((elem) => elem.id === item.id)
+                                ? "  _cartIconAll_ fas fa-shopping-cart"
+                                : "cartIconAll fas fa-shopping-cart"
+                            }
+                          ></i>
+                        </span>
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+                );
+              })}
+          </div>
+        </>
       )}
     </>
   );

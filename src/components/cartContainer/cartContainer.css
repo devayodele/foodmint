@@ -32,11 +32,11 @@
   font-size: 27px;
   font-weight: 600;
   color: #ff7d4d;
+  margin-top: 20px;
 }
 
 .addToCart {
-  font-size: 22px;
-  font-weight: 500px;
+  font-size: 18px;
 }
 
 .emptyCart,
@@ -657,6 +657,6 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
   }
 }

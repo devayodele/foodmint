@@ -59,7 +59,7 @@
 }
 
 .dishDetails {
-  padding: 30px 15px;
+  padding: 20px 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -71,10 +71,11 @@
   box-shadow: 0 0 8px 5px #e5e4e2;
   -webkit-box-shadow: 0 0 8px 5px #e5e4e2;
   color: #36454f;
+  overflow: hidden;
 }
 
 .isClicked_ {
-  padding: 30px 15px;
+  padding: 20px 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -86,12 +87,16 @@
   -webkit-box-shadow: 0 0 8px 5px #e5e4e2;
   color: #fff;
   background-color: #ffac1c;
+  overflow: hidden;
 }
 
 .title {
   text-align: center;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 600;
+  overflow: hidden;
+  height: auto;
+  padding-top: 20px;
 }
 
 .brand {
@@ -110,38 +115,18 @@
   cursor: pointer;
 }
 
+.isClicked_:hover .label,
 .dishDetails:hover .label {
   color: #fff;
-  overflow: hidden;
-}
-
-.isClicked_:hover .label {
-  color: #fff;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .dishDetails:hover .addCart,
-.cartIconAll {
-  color: #fff;
-  overflow: hidden;
-}
-
+.cartIconAll,
 .isClicked_:hover .addCart,
 .cartIconAll {
   color: #fff;
-  overflow: hidden;
-}
-
-.isClicked_:hover .title {
-  font-size: 21px;
-  font-weight: 600;
-  overflow: hidden;
-}
-
-.isClicked_:hover .title {
-  font-size: 21px;
-  font-weight: 600;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .label {
@@ -150,29 +135,28 @@
   color: #708090;
   font-weight: 600;
   opacity: 0.9;
+  overflow: visible;
 }
 
-.dishDetails:hover .brand {
+._label_ {
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
   font-weight: 600;
-  overflow: hidden;
+  opacity: 0.9;
+  overflow: visible;
 }
 
+.dishDetails:hover .brand,
 .isClicked_:hover .brand {
   font-weight: 600;
   overflow: hidden;
 }
 
-.dishDetails:hover .prices {
-  overflow: hidden;
-}
-
-.isClicked_:hover .prices {
-  overflow: hidden;
-}
-
 .prices {
   text-align: center;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 0 auto;
+  overflow: visible;
 }
 
 .itemRatings {
@@ -180,10 +164,7 @@
   overflow: hidden;
 }
 
-.dishDetails:hover .itemRatings span {
-  overflow: hidden;
-}
-
+.dishDetails:hover .itemRatings span,
 .isClicked_:hover .itemRatings span {
   overflow: hidden;
 }
@@ -198,7 +179,20 @@
   height: 50px;
   overflow: visible;
 }
-.addCart span {
+
+._addCart__ {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  align-content: center;
+  height: 50px;
+  overflow: visible;
+}
+
+.addCart span,
+._addCart__ span {
   margin-bottom: 2px;
   overflow: visible;
 }
@@ -207,12 +201,12 @@
   color: #ffac1c;
   font-size: 22px;
   margin-top: -10px;
+  margin-left: 10px;
 }
 
-.addCart:hover {
-  color: seashell;
-}
-.prices:hover {
-  font-weight: 600;
-  font-size: medium;
+._cartIconAll_ {
+  color: #fff;
+  font-size: 22px;
+  margin-top: -10px;
+  margin-left: 10px;
 }

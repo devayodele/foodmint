@@ -31,7 +31,7 @@
 .foodItems {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   margin: 0 auto;
   font-family: "Courier New", Courier, monospace;
   font-weight: 800;
@@ -41,15 +41,22 @@
   padding-bottom: 50px;
 }
 
-#sortForm {
-  position: relative;
-  left: 90vw;
-  bottom: 20px;
+#sort_FormDiv {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  margin-bottom: 20px;
 }
 
-#select {
-  padding: 5px;
-  font-weight: 600;
+#sort_Form {
+  display: flex;
+  width: auto;
+}
+
+#sort_Form select {
+  margin-bottom: 30px;
+  margin-left: 10px;
 }
 
 .menuItem {
@@ -70,12 +77,12 @@
 }
 
 .dishDetails {
-  padding: 30px 15px;
+  padding: 20px 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 310px;
+  height: 300px;
   background-color: #fff;
   width: 220px;
   border-radius: 15px;
@@ -85,11 +92,29 @@
   overflow: hidden;
 }
 
+.isClicked_ {
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 300px;
+  width: 220px;
+  border-radius: 15px;
+  box-shadow: 0 0 8px 5px #e5e4e2;
+  -webkit-box-shadow: 0 0 8px 5px #e5e4e2;
+  color: #fff;
+  background-color: #ffac1c;
+  overflow: hidden;
+}
+
 .title {
   text-align: center;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 600;
   overflow: hidden;
+  height: auto;
+  padding-top: 20px;
 }
 
 .brand {
@@ -102,20 +127,18 @@
   cursor: pointer;
 }
 
-.dishDetails:hover .label {
+.isClicked_:hover {
+  background-color: #ffac1c;
   color: #fff;
-  overflow: hidden;
+  cursor: pointer;
 }
 
-.dishDetails:hover .addCart {
+.dishDetails:hover .addCart,
+.cartIconAll,
+.isClicked_:hover .addCart,
+.cartIconAll {
   color: #fff;
-  overflow: hidden;
-}
-
-.dishDetails:hover .title {
-  font-size: 21px;
-  font-weight: 600;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .label {
@@ -127,51 +150,67 @@
   overflow: visible;
 }
 
-.dishDetails:hover .brand {
+._label_ {
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
   font-weight: 600;
-  overflow: hidden;
+  opacity: 0.9;
+  overflow: visible;
 }
 
-.dishDetails:hover .prices {
+.dishDetails:hover .brand,
+.isClicked_:hover .brand {
+  font-weight: 600;
   overflow: hidden;
 }
 
 .prices {
   text-align: center;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 0 auto;
   overflow: visible;
 }
 
-#itemRateDiv {
-  overflow: visible;
-}
-
-#itemRatings {
+.itemRatings {
   height: auto;
-  overflow: visible;
+  overflow: hidden;
 }
 
-.dishDetails:hover .itemRatings span {
-  overflow: visible;
-}
-
-#addCartDiv {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  overflow: visible;
-  height: 30px;
+.dishDetails:hover .itemRatings span,
+.isClicked_:hover .itemRatings span {
+  overflow: hidden;
 }
 
 .dishDetails:hover #addCart {
   color: #fff;
 }
 
-#addCart {
+.addCart {
+  margin-top: 20px;
   font-weight: 700;
   font-size: 20px;
   color: #ffac1c;
-  padding-bottom: 20px;
+  display: flex;
+  align-content: center;
+  height: 50px;
+  overflow: visible;
+}
+
+._addCart__ {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  align-content: center;
+  height: 50px;
+  overflow: visible;
+}
+
+.addCart span,
+._addCart__ span {
+  margin-bottom: 2px;
+  overflow: visible;
 }
 
 .dishDetails:hover .cartIconAll {
@@ -180,12 +219,29 @@
 
 .cartIconAll {
   color: #ffac1c;
-  overflow: hidden;
-  font-size: 24px;
-  margin: 0 auto 20px 10px;
+  font-size: 22px;
+  margin-top: -10px;
+  margin-left: 10px;
 }
 
-.prices:hover {
-  font-weight: 600;
-  font-size: medium;
+._cartIconAll_ {
+  color: #fff;
+  font-size: 22px;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .foodItems {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 800;
+    height: 100%;
+    width: 90%;
+    border-radius: 15px;
+    padding-bottom: 50px;
+  }
 }

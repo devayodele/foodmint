@@ -15,7 +15,7 @@ export default function Popular() {
     "salad",
     "drinks",
     "pizza",
-    "streak",
+    "steak",
     "sandwich",
     "hamburger",
   ];
@@ -38,11 +38,9 @@ export default function Popular() {
       )}
 
       {!acceptedLink && (
-        <p>
-          Unrealistic query detected, Don't worry just go back
-          <Link to="/" id="pageErrorlnk">
-            Home
-          </Link>
+        <p id="err_query_para_">
+          Unrealistic query detected, don't worry just go back
+          <Link to="/">Home</Link>
         </p>
       )}
     </>
