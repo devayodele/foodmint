@@ -57,6 +57,10 @@ const cartSlice = createSlice({
     addTotalAmount(state, { payload }) {
       state.totalAmount.push(payload);
     },
+
+    click(state, { payload }) {
+      const item = state.cart.find((item) => item.id === payload.id);
+    },
   },
 });
 
