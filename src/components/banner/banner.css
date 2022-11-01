@@ -1,6 +1,6 @@
 .banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("C:\Users\HP ENVY X360\Dev AY\react-proj\src\components\assets\rqse48LEMFDhS84Xr2-yF-transformed-(4)-transformed.jpeg");
+    url("C:\Users\HP ENVY X360\Dev AY\react-proj\src\components\assets\pngtree-taobao-food-vector-cartoon-fast-food-chicken-leg-cutlery-burger-seasoning-picture-image_1122196.jpg");
   background-size: contain;
   background-repeat: repeat;
   height: 400px;
@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  top: 82px;
   z-index: -2;
 }
 
@@ -17,10 +18,10 @@
 }
 
 .sloganPara {
-  width: 600px;
+  width: 500px;
   font-size: 15px;
   font-weight: 600;
-  color: green;
+  color: #fff;
 }
 
 .slogan1 {
@@ -37,7 +38,7 @@
   font-weight: 900;
   font-size: 25px;
   overflow: visible;
-  animation: appear 1s ease-in-out 0.5s 1 forwards;
+  animation: appear 1s ease-in-out 1 forwards;
 }
 
 @keyframes appear {
@@ -60,7 +61,7 @@
   width: 300px;
   color: #fff;
   position: relative;
-  top: 30px;
+  top: 60px;
   animation: slideUp 2s ease 1 forwards;
 }
 
@@ -75,7 +76,7 @@
   }
 
   100% {
-    top: -50px;
+    top: -20px;
     margin: -20px 5vw;
   }
 }
@@ -88,7 +89,7 @@
   border-radius: 10px;
   width: 120px;
   border-radius: 10px;
-  background-color: #357a38;
+  background-color: #ff4500;
   font-size: 14px;
   font-weight: 600;
   color: #fff;
@@ -101,13 +102,13 @@
 
 #menuBtn:hover,
 #orderBtn:hover {
-  background-color: #ff7d4d !important;
+  background-color: #357a38 !important;
 }
 
 @media screen and (max-width: 480px) {
   .banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-      url("C:\Users\HP ENVY X360\Dev AY\react-proj\src\components\assets\rqse48LEMFDhS84Xr2-yF-transformed-(4)-transformed.jpeg");
+      url("C:\Users\HP ENVY X360\Dev AY\react-proj\src\components\assets\pngtree-taobao-food-vector-cartoon-fast-food-chicken-leg-cutlery-burger-seasoning-picture-image_1122196.jpg");
     background-size: contain;
     background-repeat: repeat;
     height: 210px;
@@ -115,7 +116,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    top: -5px;
+    top: 50px;
     z-index: -2;
     overflow: visible;
   }
@@ -148,7 +149,7 @@
     left: -50px;
     font-size: 15px;
     font-weight: 900;
-    animation: appear 1s ease-in-out 0.5s 1 forwards;
+    animation: appear 1.5s ease-in-out 1 forwards;
     border: 0.5px solid black;
     overflow: visible;
   }
@@ -161,7 +162,7 @@
     border-radius: 10px;
     width: 110px;
     border-radius: 10px;
-    background-color: #357a38;
+    background-color: #ff4500;
     font-size: 14px;
     font-weight: 600;
     color: #fff;
@@ -178,17 +179,17 @@
     width: 300px;
     color: #fff;
     position: relative;
-    animation: slideUp 2s ease 1 forwards;
+    animation: slideUp 1s ease 1 forwards;
   }
 
   @keyframes slideUp {
     0% {
       top: -60px;
-      margin: 100px 2vw;
+      margin: 100px -1vw;
     }
 
     100% {
-      top: -105px;
+      top: -65px;
       margin: 55px -1vw;
     }
   }

@@ -141,7 +141,8 @@
   }
 
   .newsItem p {
-    width: 100%;
+    width: 900%;
+    margin: 0 auto;
     font-size: 14px;
     text-align: left;
   }

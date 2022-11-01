@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import GlobalState from "./store/GlobalState";
 import Home from "./pages/home/Home";
 import Popular from "./pages/popular/Popular";

@@ -1,10 +1,19 @@
+#dropdown_bar_ {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  overflow: visible;
+  z-index: 99999;
+  width: 100vw;
+}
+
 #foodLogoHome {
-  height: 50px;
+  height: 40px;
   display: flex;
   align-content: center;
   width: 200px;
   overflow: visible;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 7px;
   margin-right: 25vw;
   margin-left: 10px;
@@ -23,7 +32,7 @@
 
 #mintHome {
   font-size: 22px;
-  color: #ff7d4d;
+  color: #ff4500;
   font-weight: 700;
 }
 
@@ -39,12 +48,13 @@
   font-family: "Avenir Next", "Avenir", sans-serif;
   overflow: visible;
   height: 0;
+  background-color: #fff;
 }
 
 #menuToggle {
   display: block;
   position: relative;
-  top: -50px;
+  top: -40px;
   left: 83vw;
   z-index: 1;
   overflow: visible;
@@ -141,7 +151,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  #menuToggle {
+  #dropdown_bar_ {
     display: none;
   }
 }

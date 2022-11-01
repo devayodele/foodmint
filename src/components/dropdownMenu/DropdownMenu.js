@@ -4,7 +4,7 @@ import "./dropdownMenu.css";
 
 export default function DropDownMenu() {
   return (
-    <>
+    <div id="dropdown_bar_">
       <div id="foodLogoHome">
         <img
           src="https://cdn3.vectorstock.com/i/1000x1000/19/12/fork-spoon-and-knife-sign-orange-icon-on-black-vector-13391912.jpg"
@@ -25,18 +25,18 @@ export default function DropDownMenu() {
             <Link to="/">
               <li>Home</li>
             </Link>
-            <a href="#aboutDiv">
+            <a>
               <li>About</li>
             </a>
-            <a href="#experts">
+            <a>
               <li>Team</li>
             </a>
-            <a href="#contact_div">
+            <a>
               <li>Contact</li>
             </a>
           </ul>
         </div>
       </nav>
-    </>
+    </div>
   );
 }

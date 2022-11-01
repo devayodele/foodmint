@@ -37,7 +37,7 @@
   overflow: hidden;
 }
 
-.categoryContainer {
+.categoryContainer__ {
   padding: 10px;
   height: auto;
   display: flex;
@@ -47,14 +47,14 @@
   margin: 20px auto 80px auto;
 }
 
-.img {
+._img {
   width: 60px;
   height: 60px;
   margin-right: 10px;
   border-radius: 50%;
 }
 
-.categoryItem {
+.categoryItem_ {
   height: auto;
   width: 200px;
   border-radius: 10px;
@@ -64,11 +64,11 @@
   transition: background-color 0.5s ease;
 }
 
-.categoryItem:hover {
+.categoryItem_:hover {
   background-color: #ff7d4d;
 }
 
-.categoryLink {
+._categoryLink {
   height: auto;
   width: auto;
   display: flex;
@@ -79,7 +79,7 @@
   color: #000;
 }
 
-.categoryLink:hover {
+._categoryLink:hover {
   text-decoration: none;
   color: #fff;
 }
@@ -88,17 +88,18 @@
   #menuHome {
     margin: 0 auto;
     position: relative;
-    top: 50px;
+    width: 100vw;
+    top: 40px;
     animation: menuSlide 2s ease 1 forwards;
-    margin-bottom: -80px;
+    margin-bottom: -120px;
   }
   @keyframes menuSlide {
     0% {
-      top: 50px;
+      top: 40px;
     }
 
     100% {
-      top: -120px;
+      top: -80px;
     }
   }
 
@@ -121,5 +122,49 @@
     background: #fff;
     margin: 0 auto;
     margin-bottom: 30px;
+  }
+  .categoryContainer__ {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    width: 100vw;
+    margin: 20px auto 80px auto;
+  }
+
+  .categoryItem_ {
+    margin-bottom: 10px;
+    height: auto;
+    width: 140px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 5px #e5e4e2;
+    -webkit-box-shadow: 0 0 8px 5px #e5e4e2;
+    transition: background-color 0.5s ease;
+    overflow: visible;
+    padding-right: 10px;
+  }
+
+  ._categoryLink {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+
+    overflow: visible;
+  }
+  ._img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  ._span_label {
+    font-size: 13px;
+    font-weight: 700;
   }
 }

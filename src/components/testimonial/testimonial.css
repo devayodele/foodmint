@@ -179,7 +179,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 670px;
+    height: 600px;
     width: 100vw;
     text-align: center;
   }
@@ -188,17 +188,17 @@
     position: relative;
     right: 0;
     height: auto;
-    overflow: hidden;
+
     margin: 0 auto;
   }
   .row {
-    height: auto;
+    height: 475px;
     overflow: visible;
     margin: 0 auto;
   }
 
   .col-lg-8 {
-    height: auto;
+    height: 475px;
     padding: 20px 0;
 
     margin: 0 auto;
@@ -243,12 +243,22 @@
     margin: 0 auto;
   }
 
+  #myCarousel {
+    height: 470px;
+    overflow: hidden;
+  }
+
+  #carousel-inner {
+    height: 470px;
+    overflow: hidden;
+  }
+
   .carousel .carousel-item {
     padding-top: 120px;
     color: #999;
     font-size: 14px;
     text-align: center;
-    height: 600px;
+    height: 470px;
     background-color: #fff;
     width: 80vw;
     margin: 0 auto;
@@ -324,7 +334,7 @@
     text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
   }
   .carousel-indicators {
-    bottom: 90px;
+    bottom: 0;
   }
   .carousel-indicators li,
   .carousel-indicators li.active {
